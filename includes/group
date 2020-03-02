@@ -1,0 +1,235 @@
+<h1 id='group'>Group</h1><h2 id='post-group-create-group-accesstoken-accesstoken'>POST /group/create-group?accessToken={accessToken}</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group-test"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"desc test"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9181158038276432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group-test"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"desc test"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tue Jan 28 2020 04:45:07 GMT+0000 (Coordinated Universal Time)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9170315640735828"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description'>Description</h3>
+<p>Create new event group</p>
+<h3 id='request-parameter'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Group event name</td>
+<td>True</td>
+<td>group-test</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Group event description</td>
+<td>True</td>
+<td>group description test</td>
+</tr>
+</tbody></table>
+<h2 id='post-group-invitation-invite-accesstoken-accesstoken'>POST /group/invitation/invite?accessToken={accessToken}</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9177652795967584"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193517173606516"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193526318926006"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193517173606516"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVITED"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9177652795967584"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sat, 01 Feb 2020 13:35:57 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"invited_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-2'>Description</h3>
+<p>Invite other member to an event</p>
+<h3 id='request-parameter-2'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>String</td>
+<td>User ID to invite</td>
+<td>True</td>
+<td>user:9177652795967584</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>String</td>
+<td>Group ID to invite the invitee to</td>
+<td>True</td>
+<td>9193517173606516</td>
+</tr>
+</tbody></table>
+<h2 id='post-group-invitation-accept-accesstoken-accesstoken'>POST /group/invitation/accept?accessToken={accessToken}</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9177652795967584"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193517173606516"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sun, 09 Feb 2020 10:15:37 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sat, 01 Feb 2020 12:57:30 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCEPTED"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"invited_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193450719021134"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9178381983451212"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-3'>Description</h3>
+<p>Accept an invitation</p>
+<h3 id='request-parameter-3'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>String</td>
+<td>User ID to invite</td>
+<td>True</td>
+<td>user:9177652795967584</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>String</td>
+<td>Group ID to invite the invitee to</td>
+<td>True</td>
+<td>9193517173606516</td>
+</tr>
+</tbody></table>
+<h2 id='post-group-invitation-decline-accesstoken-accesstoken'>POST /group/invitation/decline?accessToken={accessToken}</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9177652795967584"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193517173606516"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sun, 09 Feb 2020 10:15:37 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sat, 01 Feb 2020 12:57:30 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEMBER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DECLINED"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"invited_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193450719021134"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9178381983451212"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-4'>Description</h3>
+<p>Accept an invitation</p>
+<h3 id='request-parameter-4'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>String</td>
+<td>User ID to invite</td>
+<td>True</td>
+<td>user:9177652795967584</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>String</td>
+<td>Group ID to invite the invitee to</td>
+<td>True</td>
+<td>9193517173606516</td>
+</tr>
+</tbody></table>
+<h2 id='get-group-invitation-my-invitation-accesstoken-accesstoken'>GET /group/invitation/my-invitation?accessToken={accessToken}</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sat Feb 01 2020 12:46:03 GMT+0000 (Coordinated Universal Time)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193428193904732"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group test"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-5'>Description</h3>
+<p>Get list of invitation</p>
+<h2 id='get-group-my-group-accesstoken-accesstoken'>GET /group/my-group?accessToken={accessToken}</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sat Feb 01 2020 13:31:18 GMT+0000 (Coordinated Universal Time)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9193517173606516"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group test"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-6'>Description</h3>
+<p>Get list of joined groups</p>
