@@ -17,4 +17,8 @@ search: true
 
 # Introduction
 
-Lorem ipsum dolor sit amet
+Floo backend is authenticated only with user id which is put in the `userid` header on each request, without it, server will return code `401 Unauthorized` and will not process your request.
+
+### Base URL
+
+https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging
