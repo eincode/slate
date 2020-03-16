@@ -220,21 +220,26 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#base-url" class="toc-h2 toc-link" data-title="Base URL">Base URL</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#post-user-create-user" class="toc-h2 toc-link" data-title="POST /user/create-user">POST /user/create-user</a>
+                    <a href="#user-registration-flow" class="toc-h2 toc-link" data-title="User Registration Flow">User Registration Flow</a>
                   </li>
                   <li>
-                    <a href="#get-user-search-name-name" class="toc-h2 toc-link" data-title="GET /user/search?name={name}">GET /user/search?name={name}</a>
+                    <a href="#post-users-update" class="toc-h2 toc-link" data-title="POST /users/update">POST /users/update</a>
                   </li>
                   <li>
-                    <a href="#post-user-update-accesstoken-accesstoken" class="toc-h2 toc-link" data-title="POST /user/update?accessToken={accessToken}">POST /user/update?accessToken={accessToken}</a>
+                    <a href="#get-users-me" class="toc-h2 toc-link" data-title="GET /users/me">GET /users/me</a>
                   </li>
                   <li>
-                    <a href="#get-user-single-userid-userid" class="toc-h2 toc-link" data-title="GET /user/single?userID={userID}">GET /user/single?userID={userID}</a>
+                    <a href="#get-users-userid" class="toc-h2 toc-link" data-title="GET /users/:userId">GET /users/:userId</a>
                   </li>
               </ul>
           </li>
@@ -271,92 +276,29 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Lorem ipsum dolor sit amet</p>
-<h1 id='user'>User</h1><h2 id='post-user-create-user'>POST /user/create-user</h2>
+<p>Floo backend is authenticated only with user id which is put in the <code>userid</code> header on each request, without it, server will return code <code>401 Unauthorized</code> and will not process your request.</p>
+<h3 id='base-url'>Base URL</h3>
+<p>https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging</p>
+<h1 id='user'>User</h1><h2 id='user-registration-flow'>User Registration Flow</h2><h3 id='cognito-registration'>Cognito registration</h3>
+<p>User needs to be registered first through cognito in order to get that user&#39;s ID to be used in the request header. After user registration, user will be asked for their data needed in order to use Floo app. After the data is obtained, client will update the user details through the update endpoint below.</p>
+<h3 id='after-cognito-registration'>After Cognito registration</h3>
+<p>After user is registered in Cognito, a Post Registration trigger will invoke the auto-user-registration function which will add said user to DynamoDb with values:</p>
+
+<ul>
+<li>User ID: User&#39;s ID provided by Cognito</li>
+<li>Email: User&#39;s cognito registered email</li>
+<li>Username: User&#39;s email before the <code>@</code> character appended with 4 digit random number</li>
+</ul>
+<h2 id='post-users-update'>POST /users/update</h2>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renoputraprawira1@gmail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"UserData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sun, 09 Feb 2020 12:17:18 GMT"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@something.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testToken"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9216020923976048"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renoputraprawira2"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition'>Definition</h3>
-<p>Register new user</p>
-<h3 id='request-parameter'>Request Parameter</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-<th>Example value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>email</td>
-<td>String</td>
-<td>User email.</td>
-<td>True</td>
-<td>user@something.com</td>
-</tr>
-<tr>
-<td>login</td>
-<td>String</td>
-<td>User method of registering</td>
-<td>True</td>
-<td><code>Google</code>, <code>Facebook</code>, <code>Email</code></td>
-</tr>
-</tbody></table>
-<h2 id='get-user-search-name-name'>GET /user/search?name={name}</h2>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"Token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SomeToken"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"UserID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9170156123719684"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fri Jan 24 2020 07:29:15 GMT+0000 (Coordinated Universal Time)"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Available_End_Time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-cgk1-1.xx.fbcdn.net/v/t1.0-1/p320x320/43650827_2486289771381006_1904738105089327104_o.jpg?_nc_cat=110&amp;_nc_oc=AQmyOKA7leU4SBp8OtZD17b5mN_tt7a2IqeSI5rIp3xN9WVy43Owlz9YoyJmUlIAT00&amp;_nc_ht=scontent-cgk1-1.xx&amp;_nc_tp=1002&amp;oh=c88e5d63df9690beedeab51a821e4c68&amp;oe=5EA92999"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Available_Start_Time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"UserName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renopp"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renoputraprawira@gmail.com"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='definition-2'>Definition</h3>
-<p>Search User</p>
-<h2 id='post-user-update-accesstoken-accesstoken'>POST /user/update?accessToken={accessToken}</h2>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test bisa ya"</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -365,20 +307,18 @@
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sun, 09 Feb 2020 11:49:38 GMT"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testToken"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renopp123"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123123"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renoputraprawira1@gmail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test bisa ya"</span><span class="w">
+  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan154432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan15@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition-3'>Definition</h3>
+</span></code></pre><h3 id='definition'>Definition</h3>
 <p>Update user profile</p>
-<h3 id='request-parameter-2'>Request Parameter</h3>
+<h3 id='request-parameter'>Request Parameter</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -416,26 +356,50 @@
 <td>True</td>
 <td>John</td>
 </tr>
+<tr>
+<td>login</td>
+<td>String</td>
+<td>User login type</td>
+<td>True</td>
+<td><code>Google</code>, <code>Facebook</code>, <code>Email</code></td>
+</tr>
 </tbody></table>
-<h2 id='get-user-single-userid-userid'>GET /user/single?userID={userID}</h2>
+<h2 id='get-users-me'>GET /users/me</h2>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SomeToken"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"UserID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user:9170156123719684"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fri Jan 24 2020 07:29:15 GMT+0000 (Coordinated Universal Time)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Available_End_Time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-cgk1-1.xx.fbcdn.net/v/t1.0-1/p320x320/43650827_2486289771381006_1904738105089327104_o.jpg?_nc_cat=110&amp;_nc_oc=AQmyOKA7leU4SBp8OtZD17b5mN_tt7a2IqeSI5rIp3xN9WVy43Owlz9YoyJmUlIAT00&amp;_nc_ht=scontent-cgk1-1.xx&amp;_nc_tp=1002&amp;oh=c88e5d63df9690beedeab51a821e4c68&amp;oe=5EA92999"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Available_Start_Time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"UserName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renopp"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"renoputraprawira@gmail.com"</span><span class="w">
+  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan154432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan15@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition-4'>Definition</h3>
-<p>Get user profile</p>
+</span></code></pre><h3 id='definition-2'>Definition</h3>
+<p>Get my profile</p>
+<h2 id='get-users-userid'>GET /users/:userId</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan154432"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan15@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='definition-3'>Definition</h3>
+<p>Get user profile based on user ID</p>
 <h1 id='group'>Group</h1><h2 id='post-group-create-group-accesstoken-accesstoken'>POST /group/create-group?accessToken={accessToken}</h2>
 <blockquote>
 <p>Request Example</p>
