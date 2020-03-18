@@ -1,50 +1,33 @@
 # Group
 
-## POST /group/create-group?accessToken={accessToken}
-
-> Request Example
-
-```json
-{
-  "name": "group-test",
-  "description": "desc test"
-}
-```
+## GET /group/:groupId
 
 > Response Example
 
 ```json
 {
-  "id": "9181158038276432",
-  "name": "group-test",
-  "description": "desc test",
-  "created_at": "Tue Jan 28 2020 04:45:07 GMT+0000 (Coordinated Universal Time)",
-  "updated_at": "-",
-  "deleted_at": "-",
-  "created_by": "user:9170315640735828",
-  "deleted_by": "-"
+  "createdAt": 1584525282422,
+  "description": "Belajar kuy",
+  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "name": "Grup Belajar",
+  "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
+  "deletedBy": null
 }
 ```
 
 ### Description
 
-Create new event group
+Get Group by ID
 
-### Request Parameter
-
-| Name        | Type   | Description             | Required | Example value          |
-| ----------- | ------ | ----------------------- | -------- | ---------------------- |
-| name        | String | Group event name        | True     | group-test             |
-| description | String | Group event description | True     | group description test |
-
-## POST /group/invitation/invite?accessToken={accessToken}
+## POST /group/update
 
 > Request Example
 
 ```json
 {
-  "user_id": "user:9177652795967584",
-  "group_id": "9193517173606516"
+  "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
+  "name": "Grup Belajar",
+  "description": "Belajar kuy"
 }
 ```
 
@@ -52,35 +35,35 @@ Create new event group
 
 ```json
 {
-  "id": "9193526318926006",
-  "group_id": "9193517173606516",
-  "role": "MEMBER",
-  "status": "INVITED",
-  "user_id": "user:9177652795967584",
-  "created_at": "Sat, 01 Feb 2020 13:35:57 GMT",
-  "invited_by": "test"
+  "createdAt": 1584525282422,
+  "description": "Belajar kuy",
+  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "name": "Grup Belajar",
+  "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
+  "deletedBy": null
 }
 ```
 
 ### Description
 
-Invite other member to an event
+Update group detail
 
 ### Request Parameter
 
-| Name     | Type   | Description                       | Required | Example value         |
-| -------- | ------ | --------------------------------- | -------- | --------------------- |
-| user_id  | String | User ID to invite                 | True     | user:9177652795967584 |
-| group_id | String | Group ID to invite the invitee to | True     | 9193517173606516      |
+| Name        | Type   | Description           | Required | Example value                        |
+| ----------- | ------ | --------------------- | -------- | ------------------------------------ |
+| group_id    | String | Group ID to update    | True     | 3b01e0a9-6873-4aea-b361-6ee07b27feb4 |
+| name        | String | New group name        | True     | Grup Belajar                         |
+| description | String | New group description | True     | Belajar kuy                          |
 
-## POST /group/invitation/accept?accessToken={accessToken}
+## POST /group/create
 
 > Request Example
 
 ```json
 {
-  "user_id": "user:9177652795967584",
-  "group_id": "9193517173606516"
+  "name": "Grup belajar bareng",
+  "description": "Yuk belajar bareng"
 }
 ```
 
@@ -88,109 +71,205 @@ Invite other member to an event
 
 ```json
 {
-  "user_id": "123123",
-  "accepted_at": "Sun, 09 Feb 2020 10:15:37 GMT",
-  "created_at": "Sat, 01 Feb 2020 12:57:30 GMT",
-  "role": "MEMBER",
-  "status": "ACCEPTED",
-  "invited_by": "123123",
-  "id": "9193450719021134",
-  "group_id": "9178381983451212"
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+  "name": "Grup belajar bareng",
+  "description": "Yuk belajar bareng",
+  "createdAt": 1584533027596,
+  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "deletedBy": null
 }
 ```
 
 ### Description
 
-Accept an invitation
+Create new Group
 
 ### Request Parameter
 
-| Name     | Type   | Description                       | Required | Example value         |
-| -------- | ------ | --------------------------------- | -------- | --------------------- |
-| user_id  | String | User ID to invite                 | True     | user:9177652795967584 |
-| group_id | String | Group ID to invite the invitee to | True     | 9193517173606516      |
+| Name        | Type   | Description           | Required | Example value       |
+| ----------- | ------ | --------------------- | -------- | ------------------- |
+| name        | String | New group name        | True     | Grup belajar bareng |
+| description | String | New group description | True     | Yuk belajar bareng  |
 
-## POST /group/invitation/decline?accessToken={accessToken}
+## POST /group/invite
 
 > Request Example
 
 ```json
 {
-  "user_id": "user:9177652795967584",
-  "group_id": "9193517173606516"
-}
-```
-
-> Response Example
-
-```json
-{
-  "user_id": "123123",
-  "accepted_at": "Sun, 09 Feb 2020 10:15:37 GMT",
-  "created_at": "Sat, 01 Feb 2020 12:57:30 GMT",
-  "role": "MEMBER",
-  "status": "DECLINED",
-  "invited_by": "123123",
-  "id": "9193450719021134",
-  "group_id": "9178381983451212"
-}
-```
-
-### Description
-
-Accept an invitation
-
-### Request Parameter
-
-| Name     | Type   | Description                       | Required | Example value         |
-| -------- | ------ | --------------------------------- | -------- | --------------------- |
-| user_id  | String | User ID to invite                 | True     | user:9177652795967584 |
-| group_id | String | Group ID to invite the invitee to | True     | 9193517173606516      |
-
-## GET /group/invitation/my-invitation?accessToken={accessToken}
-
-> Response Example
-
-```json
-{
-  "groups": [
-    {
-      "updated_at": "-",
-      "created_at": "Sat Feb 01 2020 12:46:03 GMT+0000 (Coordinated Universal Time)",
-      "deleted_at": "-",
-      "deleted_by": "-",
-      "created_by": "123",
-      "description": "value2",
-      "id": "9193428193904732",
-      "name": "group test"
-    }
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+  "users": [
+    "46406186-f4e5-4a52-8bba-3668d1fc338f",
+    "658384cb-a67a-470e-a4ba-5a16098d7589"
   ]
 }
 ```
 
+> Response Example
+
+```json
+{
+  "success": "true"
+}
+```
+
 ### Description
 
-Get list of invitation
+Invite other user to Group
 
-## GET /group/my-group?accessToken={accessToken}
+### Request Parameter
+
+| Name     | Type   | Description                     | Required | Example value                                                                     |
+| -------- | ------ | ------------------------------- | -------- | --------------------------------------------------------------------------------- |
+| group_id | String | Group ID to invite the users to | True     | ccf60309-2f0a-40e6-b348-9021b1b57fa6                                              |
+| users    | Array  | List of user ID to invite       | True     | `["46406186-f4e5-4a52-8bba-3668d1fc338f","658384cb-a67a-470e-a4ba-5a16098d7589"]` |
+
+## POST /group/remove-user
+
+> Request Example
+
+```json
+{
+  "group_member_id": "0c713b9e-88ba-437f-864a-9e2462dbf5a0"
+}
+```
 
 > Response Example
 
 ```json
 {
-  "groups": [
-    {
-      "updated_at": "-",
-      "created_at": "Sat Feb 01 2020 13:31:18 GMT+0000 (Coordinated Universal Time)",
-      "deleted_at": "-",
-      "deleted_by": "-",
-      "created_by": "123",
-      "description": "value2",
-      "id": "9193517173606516",
-      "name": "group test"
-    }
-  ]
+  "kicked_at": 1584534457426,
+  "group_member_id": "0c713b9e-88ba-437f-864a-9e2462dbf5a0",
+  "user_id": "658384cb-a67a-470e-a4ba-5a16098d7589",
+  "role": "member",
+  "status": "kicked",
+  "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "kicked_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "invited_at": 1584534383350,
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
 }
+```
+
+### Description
+
+Remove user from the Group
+
+### Request Parameter
+
+| Name            | Type   | Description               | Required | Example value                        |
+| --------------- | ------ | ------------------------- | -------- | ------------------------------------ |
+| group_member_id | String | Group member ID to remove | True     | 0c713b9e-88ba-437f-864a-9e2462dbf5a0 |
+
+## GET /group/member/:groupID
+
+> Response Example
+
+```json
+[
+  {
+    "kicked_at": null,
+    "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
+    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
+    "role": "member",
+    "status": "invited",
+    "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "kicked_by": null,
+    "invited_at": 1584534383348,
+    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+  },
+  {
+    "kicked_at": null,
+    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
+    "role": "admin",
+    "status": "joined",
+    "kicked_by": null,
+    "invited_at": 1584533027596,
+    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+  }
+]
+```
+
+### Description
+
+Get list of member in a group
+
+## GET /group/my-invitation
+
+> Response Example
+
+```json
+[
+  {
+    "createdAt": 1584533027596,
+    "description": "Yuk belajar bareng",
+    "name": "Grup belajar bareng",
+    "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+    "deletedBy": null,
+    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a"
+  }
+]
+```
+
+### Description
+
+Get list of my invitations
+
+## POST /group/respond
+
+> Request Example
+
+```json
+{
+  "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
+  "status": "joined"
+}
+```
+
+> Response Example
+
+```json
+{
+  "kicked_at": null,
+  "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
+  "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
+  "role": "member",
+  "status": "joined",
+  "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "kicked_by": null,
+  "invited_at": 1584534383348,
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+}
+```
+
+### Description
+
+Respond to group invitation
+
+### Request Parameter
+
+| Name            | Type   | Description                         | Required | Example value                        |
+| --------------- | ------ | ----------------------------------- | -------- | ------------------------------------ |
+| group_member_id | String | User's group member ID in the group | True     | d0c45242-6b87-450d-9b66-f5070461dc6a |
+| status          | String | New user status in the group        | True     | `joined` or `declined`               |
+
+## GET /group/me
+
+> Response Example
+
+```json
+[
+  {
+    "createdAt": 1584533027596,
+    "description": "Yuk belajar bareng",
+    "name": "Grup belajar bareng",
+    "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+    "deletedBy": null,
+    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0"
+  }
+]
 ```
 
 ### Description
