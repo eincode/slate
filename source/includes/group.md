@@ -245,7 +245,7 @@ Get list of my invitations
 
 ### Description
 
-Respond to group invitation
+Respond to group invitation. When user accepts the invitation, that user will automagically be friends with all of the group member
 
 ### Request Parameter
 
