@@ -111,6 +111,45 @@ Get user profile based on user ID
 
 ```json
 {
+  "username": "anjing1234"
+}
+```
+
+> Response Example
+
+```json
+[
+  {
+    "avatar": "-",
+    "login": "Google",
+    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "available_start_time": "09:00",
+    "created_at": 1583731912113,
+    "available_end_time": "21:00",
+    "role": "User",
+    "username": "anjing1234",
+    "email": "anjing@gmail.com",
+    "name": "Anjing"
+  }
+]
+```
+
+### Definition
+
+Search user by exact username
+
+### Request Parameter
+
+| Name     | Type   | Description            | Required | Example value |
+| -------- | ------ | ---------------------- | -------- | ------------- |
+| username | String | Username to search for | True     | anjing        |
+
+## POST /users/friend/search
+
+> Request Example
+
+```json
+{
   "username": "anjing"
 }
 ```
@@ -136,7 +175,7 @@ Get user profile based on user ID
 
 ### Definition
 
-Update user profile
+Search friend by username
 
 ### Request Parameter
 
