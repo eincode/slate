@@ -271,7 +271,7 @@
   </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ccf60309-2f0a-40e6-b348-9021b1b57fa6"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='description-8'>Description</h3>
-<p>Respond to group invitation</p>
+<p>Respond to group invitation. When user accepts the invitation, that user will automagically be friends with all of the group member</p>
 <h3 id='request-parameter-5'>Request Parameter</h3>
 <table><thead>
 <tr>
