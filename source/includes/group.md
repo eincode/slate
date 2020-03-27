@@ -11,7 +11,8 @@
   "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deleted_by": "-"
+  "deleted_by": "-",
+  "deleted_at": 0
 }
 ```
 
@@ -40,7 +41,8 @@ Get Group by ID
   "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deleted_by": "-"
+  "deleted_by": "-",
+  "deleted_at": 0
 }
 ```
 
@@ -76,7 +78,8 @@ Update group detail
   "description": "Yuk belajar bareng",
   "created_at": 1584533027596,
   "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "deleted_by": "-"
+  "deleted_by": "-",
+  "deleted_at": 0
 }
 ```
 
@@ -207,6 +210,7 @@ Get list of member in a group
     "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
     "deleted_by": "-",
+    "deleted_at": 0,
     "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a"
   }
 ]
@@ -267,7 +271,8 @@ Respond to group invitation. When user accepts the invitation, that user will au
     "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
     "deleted_by": "-",
-    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0"
+    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
+    "deleted_at": 0
   }
 ]
 ```
@@ -275,3 +280,38 @@ Respond to group invitation. When user accepts the invitation, that user will au
 ### Description
 
 Get list of joined groups
+
+## POST /group/remove
+
+> Request example
+
+```json
+{
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+}
+```
+
+> Response Example
+
+```json
+{
+  "created_at": 1584533027596,
+  "description": "Yuk belajar bareng",
+  "name": "Grup belajar bareng",
+  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+  "deleted_by": "-",
+  "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
+  "deleted_at": 1584533027596
+}
+```
+
+### Description
+
+Delete a group
+
+### Request Parameter
+
+| Name     | Type   | Description        | Required | Example value                        |
+| -------- | ------ | ------------------ | -------- | ------------------------------------ |
+| group_id | String | group_id to delete | True     | ccf60309-2f0a-40e6-b348-9021b1b57fa6 |
