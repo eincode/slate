@@ -11,7 +11,7 @@
   "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deletedBy": null
+  "deletedBy": "-"
 }
 ```
 
@@ -40,7 +40,7 @@ Get Group by ID
   "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deletedBy": null
+  "deletedBy": "-"
 }
 ```
 
@@ -76,7 +76,7 @@ Update group detail
   "description": "Yuk belajar bareng",
   "createdAt": 1584533027596,
   "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "deletedBy": null
+  "deletedBy": "-"
 }
 ```
 
@@ -167,23 +167,23 @@ Remove user from the Group
 ```json
 [
   {
-    "kicked_at": null,
+    "kicked_at": 0,
     "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
     "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
     "role": "member",
     "status": "invited",
     "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "kicked_by": null,
+    "kicked_by": "-",
     "invited_at": 1584534383348,
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
   },
   {
-    "kicked_at": null,
+    "kicked_at": 0,
     "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
     "role": "admin",
     "status": "joined",
-    "kicked_by": null,
+    "kicked_by": "-",
     "invited_at": 1584533027596,
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
   }
@@ -206,7 +206,7 @@ Get list of member in a group
     "name": "Grup belajar bareng",
     "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deletedBy": null,
+    "deletedBy": "-",
     "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a"
   }
 ]
@@ -231,13 +231,13 @@ Get list of my invitations
 
 ```json
 {
-  "kicked_at": null,
+  "kicked_at": 0,
   "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
   "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
   "role": "member",
   "status": "joined",
   "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "kicked_by": null,
+  "kicked_by": "-",
   "invited_at": 1584534383348,
   "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
 }
@@ -266,7 +266,7 @@ Respond to group invitation. When user accepts the invitation, that user will au
     "name": "Grup belajar bareng",
     "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deletedBy": null,
+    "deletedBy": "-",
     "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0"
   }
 ]
