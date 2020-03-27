@@ -6,12 +6,12 @@
 
 ```json
 {
-  "createdAt": 1584525282422,
+  "created_at": 1584525282422,
   "description": "Belajar kuy",
-  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deletedBy": "-"
+  "deleted_by": "-"
 }
 ```
 
@@ -35,12 +35,12 @@ Get Group by ID
 
 ```json
 {
-  "createdAt": 1584525282422,
+  "created_at": 1584525282422,
   "description": "Belajar kuy",
-  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deletedBy": "-"
+  "deleted_by": "-"
 }
 ```
 
@@ -74,9 +74,9 @@ Update group detail
   "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
   "name": "Grup belajar bareng",
   "description": "Yuk belajar bareng",
-  "createdAt": 1584533027596,
-  "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "deletedBy": "-"
+  "created_at": 1584533027596,
+  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "deleted_by": "-"
 }
 ```
 
@@ -201,12 +201,12 @@ Get list of member in a group
 ```json
 [
   {
-    "createdAt": 1584533027596,
+    "created_at": 1584533027596,
     "description": "Yuk belajar bareng",
     "name": "Grup belajar bareng",
-    "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deletedBy": "-",
+    "deleted_by": "-",
     "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a"
   }
 ]
@@ -261,12 +261,12 @@ Respond to group invitation. When user accepts the invitation, that user will au
 ```json
 [
   {
-    "createdAt": 1584533027596,
+    "created_at": 1584533027596,
     "description": "Yuk belajar bareng",
     "name": "Grup belajar bareng",
-    "createdBy": "1d0263e7-2015-458c-b29f-801fee73a393",
+    "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deletedBy": "-",
+    "deleted_by": "-",
     "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0"
   }
 ]
