@@ -235,15 +235,7 @@ Get list of my invitations
 
 ```json
 {
-  "kicked_at": 0,
-  "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
-  "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
-  "role": "member",
-  "status": "joined",
-  "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "kicked_by": "-",
-  "invited_at": 1584534383348,
-  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+  "success": "true"
 }
 ```
 
