@@ -264,15 +264,7 @@
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"kicked_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"group_member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d0c45242-6b87-450d-9b66-f5070461dc6a"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46406186-f4e5-4a52-8bba-3668d1fc338f"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"invited_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"kicked_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"invited_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584534383348</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ccf60309-2f0a-40e6-b348-9021b1b57fa6"</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='description-8'>Description</h3>
 <p>Respond to group invitation. When user accepts the invitation, that user will automagically be friends with all of the group member</p>
