@@ -22,7 +22,6 @@ After user is registered in Cognito, a Post Registration trigger will invoke the
 {
   "available_start_time": "09:00",
   "available_end_time": "21:00",
-  "avatar": "-",
   "name": "Hujan Deras",
   "login": "Email"
 }
@@ -55,7 +54,6 @@ Update user profile
 | -------------------- | ------ | ------------------------- | -------- | ----------------------------- |
 | available_start_time | String | User available start time | True     | 12:00                         |
 | available_end_time   | String | User available end time   | True     | 17:00                         |
-| avatar               | String | User avatar image link    | True     | https://google.com/           |
 | name                 | String | User name                 | True     | John                          |
 | login                | String | User login type           | True     | `Google`, `Facebook`, `Email` |
 
@@ -207,3 +205,40 @@ Search friend by username
 ### Definition
 
 Get users friends list
+
+## POST /users/upload-ava
+
+> Request Example
+
+```json
+{
+  "image": "{{base64EncodedImage}}"
+}
+```
+
+> Response Example
+
+```json
+{
+  "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1d0263e7-2015-458c-b29f-801fee73a393.jpg",
+  "login": "Google",
+  "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "available_start_time": "09:00",
+  "created_at": 1583731912113,
+  "available_end_time": "21:00",
+  "role": "User",
+  "username": null,
+  "email": "deras.hujan15@gmail.com",
+  "name": "Hujan Deras"
+}
+```
+
+### Definition
+
+Upload user avatar
+
+### Request Parameter
+
+| Name  | Type   | Description          | Required | Example value              |
+| ----- | ------ | -------------------- | -------- | -------------------------- |
+| image | String | Base64 encoded image | True     | some-base-64-encoded-image |
