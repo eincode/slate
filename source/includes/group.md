@@ -315,7 +315,7 @@ Delete a group
 | -------- | ------ | ------------------ | -------- | ------------------------------------ |
 | group_id | String | group_id to delete | True     | ccf60309-2f0a-40e6-b348-9021b1b57fa6 |
 
-## POST /users/upload-ava
+## POST /group/upload-ava
 
 > Request Example
 
