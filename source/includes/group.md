@@ -12,7 +12,8 @@
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
   "deleted_by": "-",
-  "deleted_at": 0
+  "deleted_at": 0,
+  "avatar": "-"
 }
 ```
 
@@ -42,7 +43,8 @@ Get Group by ID
   "name": "Grup Belajar",
   "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
   "deleted_by": "-",
-  "deleted_at": 0
+  "deleted_at": 0,
+  "avatar": "-"
 }
 ```
 
@@ -57,6 +59,7 @@ Update group detail
 | group_id    | String | Group ID to update    | True     | 3b01e0a9-6873-4aea-b361-6ee07b27feb4 |
 | name        | String | New group name        | True     | Grup Belajar                         |
 | description | String | New group description | True     | Belajar kuy                          |
+| avatar      | String | Group avatar          | True     | https://google.com/                  |
 
 ## POST /group/create
 
@@ -79,7 +82,8 @@ Update group detail
   "created_at": 1584533027596,
   "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
   "deleted_by": "-",
-  "deleted_at": 0
+  "deleted_at": 0,
+  "avatar": "-"
 }
 ```
 
@@ -211,7 +215,8 @@ Get list of member in a group
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
     "deleted_by": "-",
     "deleted_at": 0,
-    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a"
+    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
+    "avatar": "-"
   }
 ]
 ```
@@ -264,7 +269,8 @@ Respond to group invitation. When user accepts the invitation, that user will au
     "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
     "deleted_by": "-",
     "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
-    "deleted_at": 0
+    "deleted_at": 0,
+    "avatar": "-"
   }
 ]
 ```
@@ -294,7 +300,8 @@ Get list of joined groups
   "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
   "deleted_by": "-",
   "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
-  "deleted_at": 1584533027596
+  "deleted_at": 1584533027596,
+  "avatar": "-"
 }
 ```
 
