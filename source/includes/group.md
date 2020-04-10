@@ -314,3 +314,40 @@ Delete a group
 | Name     | Type   | Description        | Required | Example value                        |
 | -------- | ------ | ------------------ | -------- | ------------------------------------ |
 | group_id | String | group_id to delete | True     | ccf60309-2f0a-40e6-b348-9021b1b57fa6 |
+
+## POST /users/upload-ava
+
+> Request Example
+
+```json
+{
+  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
+  "image": "{{base64EncodedImage}}"
+}
+```
+
+> Response Example
+
+```json
+{
+  "avatar": "https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/10e15565-7b50-4f18-9b55-7977c617bb9b.jpg",
+  "created_at": 1585289894877,
+  "deleted_at": 0,
+  "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+  "deleted_by": "-",
+  "description": "-",
+  "name": "Aku invite corona",
+  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b"
+}
+```
+
+### Definition
+
+Upload group avatar
+
+### Request Parameter
+
+| Name     | Type   | Description          | Required | Example value                          |
+| -------- | ------ | -------------------- | -------- | -------------------------------------- |
+| image    | String | Base64 encoded image | True     | some-base-64-encoded-image             |
+| group_id | String | Group ID to update   | True     | `ccf60309-2f0a-40e6-b348-9021b1b57fa6` |
