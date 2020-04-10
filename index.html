@@ -288,6 +288,9 @@
                   <li>
                     <a href="#post-group-remove" class="toc-h2 toc-link" data-title="POST /group/remove">POST /group/remove</a>
                   </li>
+                  <li>
+                    <a href="#post-users-upload-ava" class="toc-h2 toc-link" data-title="POST /users/upload-ava">POST /users/upload-ava</a>
+                  </li>
               </ul>
           </li>
       </ul>
@@ -934,6 +937,55 @@
 <td>group_id to delete</td>
 <td>True</td>
 <td>ccf60309-2f0a-40e6-b348-9021b1b57fa6</td>
+</tr>
+</tbody></table>
+<h2 id='post-users-upload-ava'>POST /users/upload-ava</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ccf60309-2f0a-40e6-b348-9021b1b57fa6"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{base64EncodedImage}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/10e15565-7b50-4f18-9b55-7977c617bb9b.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585289894877</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aku invite corona"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10e15565-7b50-4f18-9b55-7977c617bb9b"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='definition'>Definition</h3>
+<p>Upload group avatar</p>
+<h3 id='request-parameter-7'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>image</td>
+<td>String</td>
+<td>Base64 encoded image</td>
+<td>True</td>
+<td>some-base-64-encoded-image</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>String</td>
+<td>Group ID to update</td>
+<td>True</td>
+<td><code>ccf60309-2f0a-40e6-b348-9021b1b57fa6</code></td>
 </tr>
 </tbody></table>
 
