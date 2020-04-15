@@ -365,7 +365,7 @@
 <td>ccf60309-2f0a-40e6-b348-9021b1b57fa6</td>
 </tr>
 </tbody></table>
-<h2 id='post-users-upload-ava'>POST /users/upload-ava</h2>
+<h2 id='post-group-upload-ava'>POST /group/upload-ava</h2>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
