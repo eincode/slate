@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - user
   - group
+  - events
 
 search: true
 ---
