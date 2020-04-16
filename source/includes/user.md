@@ -20,10 +20,11 @@ After user is registered in Cognito, a Post Registration trigger will invoke the
 
 ```json
 {
-  "available_start_time": "09:00",
-  "available_end_time": "21:00",
-  "name": "Hujan Deras",
-  "login": "Email"
+  "available_start_time": "00:00",
+  "available_end_time": "23:30",
+  "login": "Email",
+  "name": "corona penyakit",
+  "available_days": ["Mon", "Tue", "Wed"]
 }
 ```
 
@@ -32,15 +33,16 @@ After user is registered in Cognito, a Post Registration trigger will invoke the
 ```json
 {
   "avatar": "-",
-  "login": "Google",
-  "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "available_start_time": "09:00",
-  "created_at": 1583731912113,
-  "available_end_time": "21:00",
+  "login": "Email",
+  "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+  "available_start_time": "00:00",
+  "created_at": 1585274478868,
+  "available_end_time": "23:30",
   "role": "User",
-  "username": "deras.hujan154432",
-  "email": "deras.hujan15@gmail.com",
-  "name": "Hujan Deras"
+  "available_days": ["Mon", "Tue", "Wed"],
+  "username": "corona0606",
+  "email": "corona@mail.com",
+  "name": "corona penyakit"
 }
 ```
 
@@ -64,15 +66,16 @@ Update user profile
 ```json
 {
   "avatar": "-",
-  "login": "Google",
-  "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "available_start_time": "09:00",
-  "created_at": 1583731912113,
-  "available_end_time": "21:00",
+  "login": "Email",
+  "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+  "available_start_time": "00:00",
+  "created_at": 1585274478868,
+  "available_end_time": "23:30",
   "role": "User",
-  "username": "deras.hujan154432",
-  "email": "deras.hujan15@gmail.com",
-  "name": "Hujan Deras"
+  "available_days": ["Mon", "Tue", "Wed"],
+  "username": "corona0606",
+  "email": "corona@mail.com",
+  "name": "corona penyakit"
 }
 ```
 
