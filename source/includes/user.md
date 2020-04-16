@@ -52,12 +52,13 @@ Update user profile
 
 ### Request Parameter
 
-| Name                 | Type   | Description               | Required | Example value                 |
-| -------------------- | ------ | ------------------------- | -------- | ----------------------------- |
-| available_start_time | String | User available start time | True     | 12:00                         |
-| available_end_time   | String | User available end time   | True     | 17:00                         |
-| name                 | String | User name                 | True     | John                          |
-| login                | String | User login type           | True     | `Google`, `Facebook`, `Email` |
+| Name                 | Type   | Description               | Required | Example value                                            |
+| -------------------- | ------ | ------------------------- | -------- | -------------------------------------------------------- |
+| available_start_time | String | User available start time | True     | 12:00                                                    |
+| available_end_time   | String | User available end time   | True     | 17:00                                                    |
+| name                 | String | User name                 | True     | John                                                     |
+| login                | String | User login type           | True     | `Google`, `Facebook`, `Email`                            |
+| available_days       | String | User available days       | True     | Array of `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` |
 
 ## GET /users/me
 
