@@ -174,25 +174,24 @@ Remove user from the Group
 ```json
 [
   {
-    "kicked_at": 0,
-    "user_id": "46406186-f4e5-4a52-8bba-3668d1fc338f",
-    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
-    "role": "member",
-    "status": "invited",
-    "invited_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "kicked_by": "-",
-    "invited_at": 1584534383348,
-    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
-  },
-  {
-    "kicked_at": 0,
-    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
+    "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f.jpg",
+    "login": "Email",
+    "user_id": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+    "available_start_time": "04:00",
+    "created_at": 1585094292456,
+    "available_end_time": "21:00",
     "role": "admin",
+    "available_days": ["Mon"],
+    "username": "diare2029",
+    "email": "diare@mail.com",
+    "name": "Diare Ngentot",
+    "kicked_at": 0,
+    "group_member_id": "0efce601-5c23-46af-a01a-8e4120e04bdb",
     "status": "joined",
+    "invited_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
     "kicked_by": "-",
-    "invited_at": 1584533027596,
-    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6"
+    "invited_at": 1585289894877,
+    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b"
   }
 ]
 ```
