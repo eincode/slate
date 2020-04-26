@@ -59,7 +59,6 @@ Update group detail
 | group_id    | String | Group ID to update    | True     | 3b01e0a9-6873-4aea-b361-6ee07b27feb4 |
 | name        | String | New group name        | True     | Grup Belajar                         |
 | description | String | New group description | True     | Belajar kuy                          |
-| avatar      | String | Group avatar          | True     | https://google.com/                  |
 
 ## POST /group/create
 
