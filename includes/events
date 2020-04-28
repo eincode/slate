@@ -176,3 +176,82 @@
 <td>fe8a5876-0c42-4ddd-9e31-f4251715ce41</td>
 </tr>
 </tbody></table>
+<h2 id='post-event-sync'>POST /event/sync</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1b2a637c-73cf-49f4-9079-b35aad0f5ef1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My personal event 2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test personal event 2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1587970800000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1587974400000</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6d1c2464-a9fb-4189-889a-96f96e0d8fa9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My personal event 3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test personal event 3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1587970800000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1587974400000</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-5'>Description</h3>
+<p>Sync user personal calendar to Floo app. Note that these events will just be used to calculate user&#39;s free time and will not be shown in the app</p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<p>Request contains 1 field called <code>events</code> containing array with the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event_id</td>
+<td>String</td>
+<td>Event ID from user&#39;s calendar</td>
+<td>True</td>
+<td>1b2a637c-73cf-49f4-9079-b35aad0f5ef1</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>Event title</td>
+<td>True</td>
+<td>My personal event 2</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Event description</td>
+<td>True</td>
+<td>Test personal event 2</td>
+</tr>
+<tr>
+<td>event_start</td>
+<td>Number</td>
+<td>Event start time</td>
+<td>True</td>
+<td>1584525282422</td>
+</tr>
+<tr>
+<td>event_end</td>
+<td>Number</td>
+<td>Event end time</td>
+<td>True</td>
+<td>1584525382422</td>
+</tr>
+</tbody></table>
