@@ -6,14 +6,53 @@
 
 ```json
 {
-  "created_at": 1584525282422,
-  "description": "Belajar kuy",
-  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "name": "Grup Belajar",
-  "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "deleted_by": "-",
+  "avatar": "https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/10e15565-7b50-4f18-9b55-7977c617bb9b.jpg",
+  "created_at": 1585289894877,
   "deleted_at": 0,
-  "avatar": "-"
+  "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+  "deleted_by": "-",
+  "description": "-",
+  "name": "Aku invite coronacok",
+  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+  "member_count": 1,
+  "member_list": [
+    {
+      "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f-1589002551709.jpg",
+      "login": "Email",
+      "user_id": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "available_start_time": "04:00",
+      "created_at": 1585094292456,
+      "available_end_time": "21:00",
+      "role": "admin",
+      "available_days": [],
+      "username": "diare2029",
+      "email": "diare@mail.com",
+      "name": "Diarrhea",
+      "kicked_at": 0,
+      "group_member_id": "0efce601-5c23-46af-a01a-8e4120e04bdb",
+      "status": "joined",
+      "invited_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "kicked_by": "-",
+      "invited_at": 1585289894877,
+      "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b"
+    }
+  ],
+  "event_count": 1,
+  "event_list": [
+    {
+      "updated_at": 0,
+      "created_at": 1589257709345,
+      "deleted_at": 0,
+      "deleted_by": "-",
+      "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+      "event_end": 1584525382422,
+      "event_id": "44eedd79-06c8-4e83-944d-8e8881f5078b",
+      "description": "Weekly study",
+      "event_start": 1584525282422,
+      "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+      "title": "Belajar yuks"
+    }
+  ]
 }
 ```
 
