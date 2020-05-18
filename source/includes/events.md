@@ -57,19 +57,32 @@ Create new event
 ```json
 [
   {
-    "event_id": "fe8a5876-0c42-4ddd-9e31-f4251715ce41",
-    "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-    "title": "Belajar yuks",
+    "updated_at": 0,
+    "created_at": 1589782085370,
+    "deleted_at": 0,
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "event_end": 1584525382422,
+    "event_id": "bb1e4a52-7f01-40be-91c4-bd371676df85",
+    "description": "Weekly study 3",
+    "event_start": 1584525282422,
+    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+    "title": "Belajar yuks 3",
+    "status": "joined"
+  },
+  {
+    "updated_at": 0,
+    "created_at": 1589777415066,
+    "deleted_at": 0,
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "event_end": 1584525382422,
+    "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
     "description": "Weekly study",
     "event_start": 1584525282422,
-    "event_end": 1584525382422,
-    "location": "San Francisco",
-    "created_at": 1584525282422,
-    "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "updated_at": 0,
-    "updated_by": "-",
-    "deleted_at": 0,
-    "deleted_by": "-"
+    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+    "title": "Belajar yuks",
+    "status": "joined"
   }
 ]
 ```
