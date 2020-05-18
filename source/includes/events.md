@@ -68,7 +68,8 @@ Create new event
     "event_start": 1584525282422,
     "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
     "title": "Belajar yuks 3",
-    "status": "joined"
+    "status": "joined",
+    "user_event_id": "11b26be6-d5c2-48b0-9882-c06a829daea7"
   },
   {
     "updated_at": 0,
@@ -82,7 +83,8 @@ Create new event
     "event_start": 1584525282422,
     "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
     "title": "Belajar yuks",
-    "status": "joined"
+    "status": "joined",
+    "user_event_id": "623998f3-8d3c-4d9f-9a5c-6766d8d3fc55"
   }
 ]
 ```
