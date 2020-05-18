@@ -78,6 +78,30 @@ Create new event
 
 Get events list by group
 
+## GET /event/detail/:eventId
+
+> Response Example
+
+```json
+{
+  "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
+  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+  "title": "Belajar yuks",
+  "description": "Weekly study",
+  "event_start": 1584525282422,
+  "event_end": 1584525382422,
+  "created_at": 1589777415066,
+  "updated_at": 0,
+  "deleted_at": 0,
+  "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+  "deleted_by": "-"
+}
+```
+
+### Description
+
+Get event detail by event id
+
 ## GET /event/me
 
 > Response Example
