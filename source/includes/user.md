@@ -113,7 +113,7 @@ Get user profile based on user ID
 
 ```json
 {
-  "username": "anjing1234"
+  "username": "corona0606"
 }
 ```
 
@@ -123,15 +123,16 @@ Get user profile based on user ID
 [
   {
     "avatar": "-",
-    "login": "Google",
-    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "available_start_time": "09:00",
-    "created_at": 1583731912113,
-    "available_end_time": "21:00",
+    "login": "Email",
+    "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "available_start_time": "00:00",
+    "created_at": 1585274478868,
+    "available_end_time": "23:30",
     "role": "User",
-    "username": "anjing1234",
-    "email": "anjing@gmail.com",
-    "name": "Anjing"
+    "available_days": ["Sun"],
+    "username": "corona0606",
+    "email": "corona@mail.com",
+    "name": "corona penyakit 2"
   }
 ]
 ```
@@ -152,7 +153,7 @@ Search user by exact username
 
 ```json
 {
-  "username": "anjing"
+  "username": "corona"
 }
 ```
 
@@ -162,15 +163,16 @@ Search user by exact username
 [
   {
     "avatar": "-",
-    "login": "Google",
-    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "available_start_time": "09:00",
-    "created_at": 1583731912113,
-    "available_end_time": "21:00",
+    "login": "Email",
+    "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "available_start_time": "00:00",
+    "created_at": 1585274478868,
+    "available_end_time": "23:30",
     "role": "User",
-    "username": "anjing1234",
-    "email": "anjing@gmail.com",
-    "name": "Anjing"
+    "available_days": ["Sun"],
+    "username": "corona0606",
+    "email": "corona@mail.com",
+    "name": "corona penyakit 2"
   }
 ]
 ```
