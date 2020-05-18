@@ -245,15 +245,30 @@ Get list of member in a group
 ```json
 [
   {
-    "created_at": 1584533027596,
-    "description": "Yuk belajar bareng",
-    "name": "Grup belajar bareng",
-    "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deleted_by": "-",
+    "avatar": "-",
+    "created_at": 1589791124743,
     "deleted_at": 0,
-    "group_member_id": "d0c45242-6b87-450d-9b66-f5070461dc6a",
-    "avatar": "-"
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "description": "-",
+    "name": "testndng",
+    "group_id": "b5c0a87d-d2af-487b-bd76-b889cf4077d5",
+    "member_count": 2,
+    "member_list": [],
+    "group_member_id": "943f929e-5cb6-42db-ac37-3eed2d6e53f9"
+  },
+  {
+    "avatar": "-",
+    "created_at": 1589003687718,
+    "deleted_at": 0,
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "description": "-",
+    "name": "Diare group",
+    "group_id": "b172f75f-639f-42aa-8135-f98632bb8330",
+    "member_count": 3,
+    "member_list": [],
+    "group_member_id": "7887f1b6-90b7-4b61-ac0d-3f2debc1587d"
   }
 ]
 ```
@@ -299,15 +314,28 @@ Respond to group invitation. When user accepts the invitation, that user will au
 ```json
 [
   {
-    "created_at": 1584533027596,
-    "description": "Yuk belajar bareng",
-    "name": "Grup belajar bareng",
-    "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-    "deleted_by": "-",
-    "group_member_id": "154cd569-9cdd-48c2-a224-59ec389757b0",
+    "avatar": "-",
+    "created_at": 1589791124743,
     "deleted_at": 0,
-    "avatar": "-"
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "description": "-",
+    "name": "testndng",
+    "group_id": "b5c0a87d-d2af-487b-bd76-b889cf4077d5",
+    "member_count": 2,
+    "member_list": []
+  },
+  {
+    "avatar": "-",
+    "created_at": 1589003687718,
+    "deleted_at": 0,
+    "deleted_by": "-",
+    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "description": "-",
+    "name": "Diare group",
+    "group_id": "b172f75f-639f-42aa-8135-f98632bb8330",
+    "member_count": 3,
+    "member_list": []
   }
 ]
 ```
