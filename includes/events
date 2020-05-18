@@ -112,17 +112,48 @@
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e57de692-3881-4325-94ef-e25fab64714e"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10e15565-7b50-4f18-9b55-7977c617bb9b"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Belajar yuks"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Weekly study"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525282422</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525382422</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1589777415066</span><span class="p">,</span><span class="w">
   </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1589782085370</span><span class="p">,</span><span class="w">
   </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
+  </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525382422</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bb1e4a52-7f01-40be-91c4-bd371676df85"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Weekly study 3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525282422</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10e15565-7b50-4f18-9b55-7977c617bb9b"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Belajar yuks 3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"members_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"members_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f-1589002551709.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585094292456</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Sun"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wed"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Thu"</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"diare2029"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"diare@mail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Diarrhea"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invited"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585274478868</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Sun"</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona@mail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit 2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='description-3'>Description</h3>
 <p>Get event detail by event id</p>
