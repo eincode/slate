@@ -84,17 +84,48 @@ Get events list by group
 
 ```json
 {
-  "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
-  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
-  "title": "Belajar yuks",
-  "description": "Weekly study",
-  "event_start": 1584525282422,
-  "event_end": 1584525382422,
-  "created_at": 1589777415066,
   "updated_at": 0,
+  "created_at": 1589782085370,
   "deleted_at": 0,
+  "deleted_by": "-",
   "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-  "deleted_by": "-"
+  "event_end": 1584525382422,
+  "event_id": "bb1e4a52-7f01-40be-91c4-bd371676df85",
+  "description": "Weekly study 3",
+  "event_start": 1584525282422,
+  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+  "title": "Belajar yuks 3",
+  "members_count": 2,
+  "members_list": [
+    {
+      "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f-1589002551709.jpg",
+      "login": "Email",
+      "user_id": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "available_start_time": "04:00",
+      "created_at": 1585094292456,
+      "available_end_time": "21:00",
+      "role": "User",
+      "available_days": ["Sun", "Mon", "Tue", "Wed", "Thu"],
+      "username": "diare2029",
+      "email": "diare@mail.com",
+      "name": "Diarrhea",
+      "status": "invited"
+    },
+    {
+      "avatar": "-",
+      "login": "Email",
+      "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+      "available_start_time": "00:00",
+      "created_at": 1585274478868,
+      "available_end_time": "23:30",
+      "role": "User",
+      "available_days": ["Sun"],
+      "username": "corona0606",
+      "email": "corona@mail.com",
+      "name": "corona penyakit 2",
+      "status": "joined"
+    }
+  ]
 }
 ```
 
