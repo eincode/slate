@@ -314,28 +314,30 @@ Respond to group invitation. When user accepts the invitation, that user will au
 ```json
 [
   {
-    "avatar": "-",
-    "created_at": 1589791124743,
+    "avatar": "https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/f147a720-9e16-47f4-8a28-216f7641cf42-1589025345895.jpg",
+    "created_at": 1588769636673,
     "deleted_at": 0,
-    "deleted_by": "-",
     "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "deleted_by": "-",
     "description": "-",
-    "name": "testndng",
-    "group_id": "b5c0a87d-d2af-487b-bd76-b889cf4077d5",
-    "member_count": 2,
-    "member_list": []
+    "name": "New user test",
+    "group_id": "f147a720-9e16-47f4-8a28-216f7641cf42",
+    "member_list": [],
+    "member_count": 3,
+    "group_member_id": "5773f07c-1089-4855-8497-f7266c695a4a"
   },
   {
     "avatar": "-",
-    "created_at": 1589003687718,
+    "created_at": 1589076955879,
     "deleted_at": 0,
     "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "created_by": "e8b72159-bac5-46c2-a21f-51b73c94939d",
     "description": "-",
-    "name": "Diare group",
-    "group_id": "b172f75f-639f-42aa-8135-f98632bb8330",
-    "member_count": 3,
-    "member_list": []
+    "name": "Lalapo",
+    "group_id": "05d4e0c6-865d-462d-b7a9-4c0eebbcdbda",
+    "member_list": [],
+    "member_count": 2,
+    "group_member_id": "1a3e9e1d-8611-4008-8a1c-93b75439f65e"
   }
 ]
 ```
