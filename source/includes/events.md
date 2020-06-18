@@ -19,19 +19,22 @@
 
 ```json
 {
-  "event_id": "fe8a5876-0c42-4ddd-9e31-f4251715ce41",
-  "group_id": "3b01e0a9-6873-4aea-b361-6ee07b27feb4",
-  "title": "Belajar yuks",
-  "description": "Weekly study",
+  "event_id": "eb782268-ce50-4399-8aaa-5a17b8b4bc99",
+  "group_id": "33521b88-8129-430f-a223-11c1d7b8609b",
+  "title": "Belajar yuks 7",
+  "description": "Weekly study 7",
   "event_start": 1584525282422,
   "event_end": 1584525382422,
   "location": "San Francisco",
-  "created_at": 1584525282422,
-  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "created_at": 1592467831545,
   "updated_at": 0,
-  "updated_by": "-",
   "deleted_at": 0,
-  "deleted_by": "-"
+  "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+  "deleted_by": "-",
+  "status": "joined",
+  "user_event_id": "ce6d55fe-fe82-4dc7-b9e2-073f39b8315a",
+  "members_count": 7,
+  "members_list": []
 }
 ```
 
