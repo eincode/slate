@@ -61,33 +61,39 @@ Create new event
 [
   {
     "updated_at": 0,
-    "created_at": 1589782085370,
+    "location": "San Fransisco",
+    "created_at": 1592465557048,
     "deleted_at": 0,
     "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
     "event_end": 1584525382422,
-    "event_id": "bb1e4a52-7f01-40be-91c4-bd371676df85",
-    "description": "Weekly study 3",
+    "event_id": "a9be0d81-3aab-48f9-8e54-7f70adb595f2",
+    "description": "Weekly study 5",
     "event_start": 1584525282422,
-    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
-    "title": "Belajar yuks 3",
+    "group_id": "33521b88-8129-430f-a223-11c1d7b8609b",
+    "title": "Belajar yuks 5",
     "status": "joined",
-    "user_event_id": "11b26be6-d5c2-48b0-9882-c06a829daea7"
+    "user_event_id": "3d594840-fad5-4d00-91bf-ac696f595e48",
+    "member_count": 7,
+    "member_list": []
   },
   {
     "updated_at": 0,
-    "created_at": 1589777415066,
+    "location": "San Francisco",
+    "created_at": 1592467831545,
     "deleted_at": 0,
     "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
     "event_end": 1584525382422,
-    "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
-    "description": "Weekly study",
+    "event_id": "eb782268-ce50-4399-8aaa-5a17b8b4bc99",
+    "description": "Weekly study 7",
     "event_start": 1584525282422,
-    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
-    "title": "Belajar yuks",
+    "group_id": "33521b88-8129-430f-a223-11c1d7b8609b",
+    "title": "Belajar yuks 7",
     "status": "joined",
-    "user_event_id": "623998f3-8d3c-4d9f-9a5c-6766d8d3fc55"
+    "user_event_id": "ce6d55fe-fe82-4dc7-b9e2-073f39b8315a",
+    "member_count": 7,
+    "member_list": []
   }
 ]
 ```
