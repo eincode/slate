@@ -15,19 +15,22 @@
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe8a5876-0c42-4ddd-9e31-f4251715ce41"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3b01e0a9-6873-4aea-b361-6ee07b27feb4"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Belajar yuks"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Weekly study"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eb782268-ce50-4399-8aaa-5a17b8b4bc99"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"33521b88-8129-430f-a223-11c1d7b8609b"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Belajar yuks 7"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Weekly study 7"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525282422</span><span class="p">,</span><span class="w">
   </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525382422</span><span class="p">,</span><span class="w">
   </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584525282422</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1592467831545</span><span class="p">,</span><span class="w">
   </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
+  </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ce6d55fe-fe82-4dc7-b9e2-073f39b8315a"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"members_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"members_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='description'>Description</h3>
 <p>Create new event</p>
