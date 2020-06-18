@@ -109,18 +109,35 @@ Get events list by group
 ```json
 {
   "updated_at": 0,
-  "created_at": 1589782085370,
+  "location": "San Fransisco",
+  "created_at": 1592465557048,
   "deleted_at": 0,
   "deleted_by": "-",
-  "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+  "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
   "event_end": 1584525382422,
-  "event_id": "bb1e4a52-7f01-40be-91c4-bd371676df85",
-  "description": "Weekly study 3",
+  "event_id": "a9be0d81-3aab-48f9-8e54-7f70adb595f2",
+  "description": "Weekly study 5",
   "event_start": 1584525282422,
-  "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
-  "title": "Belajar yuks 3",
-  "members_count": 2,
+  "group_id": "33521b88-8129-430f-a223-11c1d7b8609b",
+  "title": "Belajar yuks 5",
+  "status": "joined",
+  "user_event_id": "3d594840-fad5-4d00-91bf-ac696f595e48",
+  "members_count": 7,
   "members_list": [
+    {
+      "avatar": "-",
+      "login": "Email",
+      "user_id": "5db31fba-1d1d-4b88-98eb-153532675656",
+      "available_start_time": "01:00",
+      "created_at": 1585274325214,
+      "available_end_time": "23:00",
+      "role": "User",
+      "available_days": ["Mon"],
+      "username": "sars1216",
+      "email": "sars@mail.com",
+      "name": "sars virus",
+      "status": "invited"
+    },
     {
       "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f-1589002551709.jpg",
       "login": "Email",
@@ -133,20 +150,6 @@ Get events list by group
       "username": "diare2029",
       "email": "diare@mail.com",
       "name": "Diarrhea",
-      "status": "invited"
-    },
-    {
-      "avatar": "-",
-      "login": "Email",
-      "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-      "available_start_time": "00:00",
-      "created_at": 1585274478868,
-      "available_end_time": "23:30",
-      "role": "User",
-      "available_days": ["Sun"],
-      "username": "corona0606",
-      "email": "corona@mail.com",
-      "name": "corona penyakit 2",
       "status": "joined"
     }
   ]
