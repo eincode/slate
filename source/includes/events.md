@@ -168,6 +168,25 @@ Get event detail by event id
 [
   {
     "updated_at": 0,
+    "location": "San Fransisco",
+    "created_at": 1592465557048,
+    "deleted_at": 0,
+    "deleted_by": "-",
+    "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+    "event_end": 1584525382422,
+    "event_id": "a9be0d81-3aab-48f9-8e54-7f70adb595f2",
+    "description": "Weekly study 5",
+    "event_start": 1584525282422,
+    "group_id": "33521b88-8129-430f-a223-11c1d7b8609b",
+    "title": "Belajar yuks 5",
+    "status": "joined",
+    "user_event_id": "3d594840-fad5-4d00-91bf-ac696f595e48",
+    "member_list": [],
+    "member_count": 7
+  },
+  {
+    "updated_at": 0,
+    "location": "San Fransisco",
     "created_at": 1589782085370,
     "deleted_at": 0,
     "deleted_by": "-",
@@ -178,21 +197,10 @@ Get event detail by event id
     "event_start": 1584525282422,
     "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
     "title": "Belajar yuks 3",
-    "status": "joined"
-  },
-  {
-    "updated_at": 0,
-    "created_at": 1589777415066,
-    "deleted_at": 0,
-    "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-    "event_end": 1584525382422,
-    "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
-    "description": "Weekly study",
-    "event_start": 1584525282422,
-    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
-    "title": "Belajar yuks",
-    "status": "invited"
+    "status": "invited",
+    "user_event_id": "b9552f75-de1c-4975-9aee-1a7544ab9e7e",
+    "member_list": [],
+    "member_count": 1
   }
 ]
 ```
