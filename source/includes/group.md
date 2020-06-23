@@ -238,45 +238,6 @@ Remove user from the Group
 
 Get list of member in a group
 
-## GET /group/my-invitation
-
-> Response Example
-
-```json
-[
-  {
-    "avatar": "-",
-    "created_at": 1589791124743,
-    "deleted_at": 0,
-    "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-    "description": "-",
-    "name": "testndng",
-    "group_id": "b5c0a87d-d2af-487b-bd76-b889cf4077d5",
-    "member_count": 2,
-    "member_list": [],
-    "group_member_id": "943f929e-5cb6-42db-ac37-3eed2d6e53f9"
-  },
-  {
-    "avatar": "-",
-    "created_at": 1589003687718,
-    "deleted_at": 0,
-    "deleted_by": "-",
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-    "description": "-",
-    "name": "Diare group",
-    "group_id": "b172f75f-639f-42aa-8135-f98632bb8330",
-    "member_count": 3,
-    "member_list": [],
-    "group_member_id": "7887f1b6-90b7-4b61-ac0d-3f2debc1587d"
-  }
-]
-```
-
-### Description
-
-Get list of my invitations
-
 ## POST /group/respond
 
 > Request Example
@@ -314,37 +275,25 @@ Respond to group invitation. When user accepts the invitation, that user will au
 ```json
 [
   {
-    "avatar": "https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/f147a720-9e16-47f4-8a28-216f7641cf42-1589025345895.jpg",
-    "created_at": 1588769636673,
+    "avatar": "https://groups-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/10e15565-7b50-4f18-9b55-7977c617bb9b.jpg",
+    "created_at": 1585289894877,
     "deleted_at": 0,
-    "created_by": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+    "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
     "deleted_by": "-",
     "description": "-",
-    "name": "New user test",
-    "group_id": "f147a720-9e16-47f4-8a28-216f7641cf42",
+    "name": "Aku invite coronacok",
+    "group_id": "10e15565-7b50-4f18-9b55-7977c617bb9b",
+    "member_count": 1,
     "member_list": [],
-    "member_count": 3,
-    "group_member_id": "5773f07c-1089-4855-8497-f7266c695a4a"
-  },
-  {
-    "avatar": "-",
-    "created_at": 1589076955879,
-    "deleted_at": 0,
-    "deleted_by": "-",
-    "created_by": "e8b72159-bac5-46c2-a21f-51b73c94939d",
-    "description": "-",
-    "name": "Lalapo",
-    "group_id": "05d4e0c6-865d-462d-b7a9-4c0eebbcdbda",
-    "member_list": [],
-    "member_count": 2,
-    "group_member_id": "1a3e9e1d-8611-4008-8a1c-93b75439f65e"
+    "group_member_id": "0efce601-5c23-46af-a01a-8e4120e04bdb",
+    "status": "joined"
   }
 ]
 ```
 
 ### Description
 
-Get list of joined groups
+Get list of joined and invited groups
 
 ## POST /group/remove
 
