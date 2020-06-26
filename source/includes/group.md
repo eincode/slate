@@ -105,8 +105,8 @@ Update group detail
 
 ```json
 {
-  "name": "Grup belajar bareng",
-  "description": "Yuk belajar bareng"
+  "name": "New userfriend test group 2",
+  "description": "Test group 2"
 }
 ```
 
@@ -114,14 +114,33 @@ Update group detail
 
 ```json
 {
-  "group_id": "ccf60309-2f0a-40e6-b348-9021b1b57fa6",
-  "name": "Grup belajar bareng",
-  "description": "Yuk belajar bareng",
-  "created_at": 1584533027596,
-  "created_by": "1d0263e7-2015-458c-b29f-801fee73a393",
+  "group_id": "fdf2448c-28eb-4921-b037-be8e144a6f73",
+  "name": "New userfriend test group 2",
+  "description": "Test group 2",
+  "created_at": 1593079537259,
+  "created_by": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
   "deleted_by": "-",
   "deleted_at": 0,
-  "avatar": "-"
+  "avatar": "-",
+  "member_count": 1,
+  "member_list": [
+    {
+      "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1f35081e-afb3-4bd8-b132-4a9ecf36736f-1592866747620.jpg",
+      "login": "Email",
+      "user_id": "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "available_start_time": "04:00",
+      "created_at": 1585094292456,
+      "available_end_time": "21:00",
+      "role": "User",
+      "available_days": ["Sun", "Mon", "Tue", "Wed", "Thu"],
+      "username": "diare2029",
+      "email": "diare@mail.com",
+      "name": "Diarrheak"
+    }
+  ],
+  "event_count": 0,
+  "event_list": [],
+  "group_member_id": "fda25edc-d8cb-4579-8126-33e7c350ba67"
 }
 ```
 
