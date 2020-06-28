@@ -297,3 +297,52 @@ Request contains 1 field called `events` containing array with the following fie
 | description | String | Event description             | True     | Test personal event 2                |
 | event_start | Number | Event start time              | True     | 1584525282422                        |
 | event_end   | Number | Event end time                | True     | 1584525382422                        |
+
+## GET /event/suggest
+
+> Response Example
+
+```json
+[
+  {
+    "startTime": 1591009200000,
+    "endTime": 1591030800000,
+    "ableUserCount": 2,
+    "ableUserIds": [
+      "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "b0751348-8b39-41bc-a26a-c5bcf28195de"
+    ]
+  },
+  {
+    "startTime": 1591003800000,
+    "endTime": 1591025400000,
+    "ableUserCount": 2,
+    "ableUserIds": [
+      "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "b0751348-8b39-41bc-a26a-c5bcf28195de"
+    ]
+  },
+  {
+    "startTime": 1590998400000,
+    "endTime": 1591020000000,
+    "ableUserCount": 2,
+    "ableUserIds": [
+      "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+      "b0751348-8b39-41bc-a26a-c5bcf28195de"
+    ]
+  }
+]
+```
+
+### Request queries
+
+| Name      | Type   | Description                                          | Required | Example value                        |
+| --------- | ------ | ---------------------------------------------------- | -------- | ------------------------------------ |
+| startTime | Number | Start time range to sugggest                         | True     | 1590944400000                        |
+| endTime   | Number | End time range to suggest                            | True     | 1591030800000                        |
+| groupId   | String | Group ID to create event                             | True     | 2d303746-cd62-44fb-9e6c-624785a8d0a8 |
+| duration  | String | Event duration (in minutes) must have `minutes` word | True     | 60 minutes                           |
+
+### Example full link request
+
+https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/group-member-free-time?startTime=1590944400000&endTime=1591030800000&groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&duration=60%20minutes
