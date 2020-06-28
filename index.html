@@ -311,6 +311,9 @@
                   <li>
                     <a href="#post-event-sync" class="toc-h2 toc-link" data-title="POST /event/sync">POST /event/sync</a>
                   </li>
+                  <li>
+                    <a href="#get-event-suggest" class="toc-h2 toc-link" data-title="GET /event/suggest">GET /event/suggest</a>
+                  </li>
               </ul>
           </li>
       </ul>
@@ -1409,6 +1412,80 @@
 <td>1584525382422</td>
 </tr>
 </tbody></table>
+<h2 id='get-event-suggest'>GET /event/suggest</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1591009200000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1591030800000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1591003800000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1591025400000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1590998400000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1591020000000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='request-queries'>Request queries</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>startTime</td>
+<td>Number</td>
+<td>Start time range to sugggest</td>
+<td>True</td>
+<td>1590944400000</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>Number</td>
+<td>End time range to suggest</td>
+<td>True</td>
+<td>1591030800000</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>String</td>
+<td>Group ID to create event</td>
+<td>True</td>
+<td>2d303746-cd62-44fb-9e6c-624785a8d0a8</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>String</td>
+<td>Event duration (in minutes) must have <code>minutes</code> word</td>
+<td>True</td>
+<td>60 minutes</td>
+</tr>
+</tbody></table>
+<h3 id='example-full-link-request'>Example full link request</h3>
+<p>https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest?startTime=1590944400000&amp;endTime=1591030800000&amp;groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&amp;duration=60%20minutes</p>
 
       </div>
       <div class="dark-box">
