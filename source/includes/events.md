@@ -345,4 +345,4 @@ Request contains 1 field called `events` containing array with the following fie
 
 ### Example full link request
 
-https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/group-member-free-time?startTime=1590944400000&endTime=1591030800000&groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&duration=60%20minutes
+https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest?startTime=1590944400000&endTime=1591030800000&groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&duration=60%20minutes
