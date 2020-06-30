@@ -427,3 +427,48 @@
 </tbody></table>
 <h3 id='example-full-link-request'>Example full link request</h3>
 <p>https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest?startTime=1590944400000&amp;endTime=1591030800000&amp;groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&amp;duration=60%20minutes</p>
+<h2 id='post-event-respond'>POST /event/respond</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"623998f3-8d3c-4d9f-9a5c-6766d8d3fc55"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e57de692-3881-4325-94ef-e25fab64714e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joined"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_event_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"623998f3-8d3c-4d9f-9a5c-6766d8d3fc55"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='description-7'>Description</h3>
+<p>Respond to event invitation</p>
+<h3 id='request-parameter-3'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_event_id</td>
+<td>String</td>
+<td>User Event ID to respond to</td>
+<td>True</td>
+<td>623998f3-8d3c-4d9f-9a5c-6766d8d3fc55</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>Respond</td>
+<td>True</td>
+<td><code>joined</code> or <code>declined</code></td>
+</tr>
+</tbody></table>
