@@ -346,3 +346,36 @@ Request contains 1 field called `events` containing array with the following fie
 ### Example full link request
 
 https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest?startTime=1590944400000&endTime=1591030800000&groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&duration=60%20minutes
+
+## POST /event/respond
+
+> Request Example
+
+```json
+{
+  "user_event_id": "623998f3-8d3c-4d9f-9a5c-6766d8d3fc55",
+  "status": "joined"
+}
+```
+
+> Response Example
+
+```json
+{
+  "event_id": "e57de692-3881-4325-94ef-e25fab64714e",
+  "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
+  "status": "joined",
+  "user_event_id": "623998f3-8d3c-4d9f-9a5c-6766d8d3fc55"
+}
+```
+
+### Description
+
+Respond to event invitation
+
+### Request Parameter
+
+| Name          | Type   | Description                 | Required | Example value                        |
+| ------------- | ------ | --------------------------- | -------- | ------------------------------------ |
+| user_event_id | String | User Event ID to respond to | True     | 623998f3-8d3c-4d9f-9a5c-6766d8d3fc55 |
+| status        | String | Respond                     | True     | `joined` or `declined`               |
