@@ -298,7 +298,54 @@ Request contains 1 field called `events` containing array with the following fie
 | event_start | Number | Event start time              | True     | 1584525282422                        |
 | event_end   | Number | Event end time                | True     | 1584525382422                        |
 
-## GET /event/suggest
+## GET /event/suggest-revamp
+
+> Response Example
+
+```json
+[
+  {
+    "startTime": 1593403200000,
+    "startTimeHumanized": "Monday 29 June 2020 04:00",
+    "endTime": 1593464400000,
+    "endTimeHumanized": "Monday 29 June 2020 21:00",
+    "ableUsers": {
+      "availableUserCount": 2,
+      "ableUserIds": [
+        "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+        "b0751348-8b39-41bc-a26a-c5bcf28195de"
+      ]
+    }
+  },
+  {
+    "startTime": 1593489600000,
+    "startTimeHumanized": "Tuesday 30 June 2020 04:00",
+    "endTime": 1593492305383,
+    "endTimeHumanized": "Tuesday 30 June 2020 04:45",
+    "ableUsers": {
+      "availableUserCount": 2,
+      "ableUserIds": [
+        "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+        "b0751348-8b39-41bc-a26a-c5bcf28195de"
+      ]
+    }
+  }
+]
+```
+
+### Request queries
+
+| Name      | Type   | Description                                          | Required | Example value                        |
+| --------- | ------ | ---------------------------------------------------- | -------- | ------------------------------------ |
+| startTime | Number | Start time range to sugggest                         | True     | 1590944400000                        |
+| endTime   | Number | End time range to suggest                            | True     | 1591030800000                        |
+| groupId   | String | Group ID to create event                             | True     | 2d303746-cd62-44fb-9e6c-624785a8d0a8 |
+
+### Example full link request
+
+https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest-revamp?startTime=1593450000000&endTime=1593622800000&groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8
+
+## GET /event/suggest (deprecated, see GET /event/suggest-revamp)
 
 > Response Example
 
