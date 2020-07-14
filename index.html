@@ -312,7 +312,10 @@
                     <a href="#post-event-sync" class="toc-h2 toc-link" data-title="POST /event/sync">POST /event/sync</a>
                   </li>
                   <li>
-                    <a href="#get-event-suggest" class="toc-h2 toc-link" data-title="GET /event/suggest">GET /event/suggest</a>
+                    <a href="#get-event-suggest-revamp" class="toc-h2 toc-link" data-title="GET /event/suggest-revamp">GET /event/suggest-revamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-event-suggest-deprecated-see-get-event-suggest-revamp" class="toc-h2 toc-link" data-title="GET /event/suggest (deprecated, see GET /event/suggest-revamp)">GET /event/suggest (deprecated, see GET /event/suggest-revamp)</a>
                   </li>
                   <li>
                     <a href="#post-event-respond" class="toc-h2 toc-link" data-title="POST /event/respond">POST /event/respond</a>
@@ -1415,7 +1418,73 @@
 <td>1584525382422</td>
 </tr>
 </tbody></table>
-<h2 id='get-event-suggest'>GET /event/suggest</h2>
+<h2 id='get-event-suggest-revamp'>GET /event/suggest-revamp</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593403200000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 04:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593464400000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 21:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593489600000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593492305383</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:45"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='request-queries'>Request queries</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>startTime</td>
+<td>Number</td>
+<td>Start time range to sugggest</td>
+<td>True</td>
+<td>1590944400000</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>Number</td>
+<td>End time range to suggest</td>
+<td>True</td>
+<td>1591030800000</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>String</td>
+<td>Group ID to create event</td>
+<td>True</td>
+<td>2d303746-cd62-44fb-9e6c-624785a8d0a8</td>
+</tr>
+</tbody></table>
+<h3 id='example-full-link-request'>Example full link request</h3>
+<p>https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest-revamp?startTime=1593450000000&amp;endTime=1593622800000&amp;groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8</p>
+<h2 id='get-event-suggest-deprecated-see-get-event-suggest-revamp'>GET /event/suggest (deprecated, see GET /event/suggest-revamp)</h2>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
@@ -1448,7 +1517,7 @@
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='request-queries'>Request queries</h3>
+</span></code></pre><h3 id='request-queries-2'>Request queries</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -1487,7 +1556,7 @@
 <td>60 minutes</td>
 </tr>
 </tbody></table>
-<h3 id='example-full-link-request'>Example full link request</h3>
+<h3 id='example-full-link-request-2'>Example full link request</h3>
 <p>https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging/event/suggest?startTime=1590944400000&amp;endTime=1591030800000&amp;groupId=2d303746-cd62-44fb-9e6c-624785a8d0a8&amp;duration=60%20minutes</p>
 <h2 id='post-event-respond'>POST /event/respond</h2>
 <blockquote>
