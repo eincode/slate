@@ -1423,32 +1423,72 @@
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593403200000</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 04:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593464400000</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 21:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593403200000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593464400000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 21:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17 hours"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593489600000</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593492305383</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:45"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593489600000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593492305383</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:45"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45 minutes"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593492305383</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:45"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593550800000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 21:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 hours"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593576000000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wednesday 01 July 2020 04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593637200000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wednesday 01 July 2020 21:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17 hours"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ableUsers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"availableUserCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ableUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"1f35081e-afb3-4bd8-b132-4a9ecf36736f"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"b0751348-8b39-41bc-a26a-c5bcf28195de"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><h3 id='request-queries'>Request queries</h3>
 <table><thead>
