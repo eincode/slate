@@ -358,7 +358,7 @@
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"29Jun2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"Mon29Jun2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593403200000</span><span class="p">,</span><span class="w">
       </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monday 29 June 2020 04:00"</span><span class="p">,</span><span class="w">
@@ -375,7 +375,7 @@
       </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"30Jun2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"Tue30Jun2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593489600000</span><span class="p">,</span><span class="w">
       </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tuesday 30 June 2020 04:00"</span><span class="p">,</span><span class="w">
@@ -407,7 +407,7 @@
       </span><span class="s2">"groupMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"01Jul2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"Wed01Jul2020"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1593576000000</span><span class="p">,</span><span class="w">
       </span><span class="s2">"startTimeHumanized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wednesday 01 July 2020 04:00"</span><span class="p">,</span><span class="w">
