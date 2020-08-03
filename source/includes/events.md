@@ -303,8 +303,8 @@ Request contains 1 field called `events` containing array with the following fie
 > Response Example
 
 ```json
-[
-  [
+{
+  "Mon29Jun2020": [
     {
       "startTime": 1593403200000,
       "startTimeHumanized": "Monday 29 June 2020 04:00",
@@ -321,7 +321,7 @@ Request contains 1 field called `events` containing array with the following fie
       "groupMemberCount": 2
     }
   ],
-  [
+  "Tue30Jun2020": [
     {
       "startTime": 1593489600000,
       "startTimeHumanized": "Tuesday 30 June 2020 04:00",
@@ -353,7 +353,7 @@ Request contains 1 field called `events` containing array with the following fie
       "groupMemberCount": 2
     }
   ],
-  [
+  "Wed01Jul2020": [
     {
       "startTime": 1593576000000,
       "startTimeHumanized": "Wednesday 01 July 2020 04:00",
@@ -370,7 +370,7 @@ Request contains 1 field called `events` containing array with the following fie
       "groupMemberCount": 2
     }
   ]
-]
+}
 ```
 
 ### Request queries
