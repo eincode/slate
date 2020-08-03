@@ -304,32 +304,72 @@ Request contains 1 field called `events` containing array with the following fie
 
 ```json
 [
-  {
-    "startTime": 1593403200000,
-    "startTimeHumanized": "Monday 29 June 2020 04:00",
-    "endTime": 1593464400000,
-    "endTimeHumanized": "Monday 29 June 2020 21:00",
-    "ableUsers": {
-      "availableUserCount": 2,
-      "ableUserIds": [
-        "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
-        "b0751348-8b39-41bc-a26a-c5bcf28195de"
-      ]
+  [
+    {
+      "startTime": 1593403200000,
+      "startTimeHumanized": "Monday 29 June 2020 04:00",
+      "endTime": 1593464400000,
+      "endTimeHumanized": "Monday 29 June 2020 21:00",
+      "duration": "17 hours",
+      "ableUsers": {
+        "availableUserCount": 2,
+        "ableUserIds": [
+          "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+          "b0751348-8b39-41bc-a26a-c5bcf28195de"
+        ]
+      },
+      "groupMemberCount": 2
     }
-  },
-  {
-    "startTime": 1593489600000,
-    "startTimeHumanized": "Tuesday 30 June 2020 04:00",
-    "endTime": 1593492305383,
-    "endTimeHumanized": "Tuesday 30 June 2020 04:45",
-    "ableUsers": {
-      "availableUserCount": 2,
-      "ableUserIds": [
-        "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
-        "b0751348-8b39-41bc-a26a-c5bcf28195de"
-      ]
+  ],
+  [
+    {
+      "startTime": 1593489600000,
+      "startTimeHumanized": "Tuesday 30 June 2020 04:00",
+      "endTime": 1593492305383,
+      "endTimeHumanized": "Tuesday 30 June 2020 04:45",
+      "duration": "45 minutes",
+      "ableUsers": {
+        "availableUserCount": 2,
+        "ableUserIds": [
+          "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+          "b0751348-8b39-41bc-a26a-c5bcf28195de"
+        ]
+      },
+      "groupMemberCount": 2
+    },
+    {
+      "startTime": 1593492305383,
+      "startTimeHumanized": "Tuesday 30 June 2020 04:45",
+      "endTime": 1593550800000,
+      "endTimeHumanized": "Tuesday 30 June 2020 21:00",
+      "duration": "16 hours",
+      "ableUsers": {
+        "availableUserCount": 2,
+        "ableUserIds": [
+          "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+          "b0751348-8b39-41bc-a26a-c5bcf28195de"
+        ]
+      },
+      "groupMemberCount": 2
     }
-  }
+  ],
+  [
+    {
+      "startTime": 1593576000000,
+      "startTimeHumanized": "Wednesday 01 July 2020 04:00",
+      "endTime": 1593637200000,
+      "endTimeHumanized": "Wednesday 01 July 2020 21:00",
+      "duration": "17 hours",
+      "ableUsers": {
+        "availableUserCount": 2,
+        "ableUserIds": [
+          "1f35081e-afb3-4bd8-b132-4a9ecf36736f",
+          "b0751348-8b39-41bc-a26a-c5bcf28195de"
+        ]
+      },
+      "groupMemberCount": 2
+    }
+  ]
 ]
 ```
 
