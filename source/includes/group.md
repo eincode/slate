@@ -99,6 +99,34 @@ Update group detail
 | name        | String | New group name        | True     | Grup Belajar                         |
 | description | String | New group description | True     | Belajar kuy                          |
 
+## POST /group/verify
+
+> Request Example
+
+```json
+{
+  "member_list": ["b0751348-8b39-41bc-a26a-c5bcf28195de"]
+}
+```
+
+> Response Example
+
+```json
+{
+  "isAbleToCreateGroup": false
+}
+```
+
+### Description
+
+Check if group can be made or not
+
+### Request Parameter
+
+| Name        | Type            | Description      | Required | Example value                            |
+| ----------- | --------------- | ---------------- | -------- | ---------------------------------------- |
+| member_list | Array of string | List of user ids | True     | ["b0751348-8b39-41bc-a26a-c5bcf28195de"] |
+
 ## POST /group/create
 
 > Request Example
