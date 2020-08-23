@@ -113,7 +113,8 @@ Update group detail
 
 ```json
 {
-  "isAbleToCreateGroup": false
+  "isAbleToCreateGroup": false,
+  "duplicateGroupName": "New userfriend test group 2"
 }
 ```
 
