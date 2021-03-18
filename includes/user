@@ -1,43 +1,24 @@
-<h1 id='user'>User</h1><h2 id='user-registration-flow'>User Registration Flow</h2><h3 id='cognito-registration'>Cognito registration</h3>
-<p>User needs to be registered first through cognito in order to get that user&#39;s ID to be used in the request header. After user registration, user will be asked for their data needed in order to use Floo app. After the data is obtained, client will update the user details through the update endpoint below.</p>
-<h3 id='after-cognito-registration'>After Cognito registration</h3>
-<p>After user is registered in Cognito, a Post Registration trigger will invoke the auto-user-registration function which will add said user to DynamoDb with values:</p>
-
-<ul>
-<li>User ID: User&#39;s ID provided by Cognito</li>
-<li>Email: User&#39;s cognito registered email</li>
-<li>Username: User&#39;s email before the <code>@</code> character appended with 4 digit random number</li>
-</ul>
-<h2 id='post-users-update'>POST /users/update</h2>
+<h1 id='user'>User</h1><h2 id='user-registration-flow'>User Registration Flow</h2><h3 id='registration'>Registration</h3>
+<p>User needs to be registered first before they can use the app</p>
+<h3 id='auth-requirements'>Auth Requirements</h3>
+<p>After login, the client needs to include token in <code>Authorization</code> field in the header with value of <code>Bearer {TOKEN}</code> to be able to verify the user authenticity</p>
+<h2 id='post-api-auth-login'>POST /api/auth/login</h2>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Mon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wed"</span><span class="p">]</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test+2@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"somePassword"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585274478868</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Mon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wed"</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona@mail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit"</span><span class="w">
+  </span><span class="s2">"accessToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjIsImVtYWlsIjoidGVzdCsyQGV4YW1wbGUuY29tIiwiaWF0IjoxNjE2MDM4ODg0fQ._QwfGpTiStsmrXxg-_bwDEQeTmXWoCgev2k4RDVrINk"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='definition'>Definition</h3>
-<p>Update user profile</p>
+<p>Login using email and password</p>
 <h3 id='request-parameter'>Request Parameter</h3>
 <table><thead>
 <tr>
@@ -45,110 +26,43 @@
 <th>Type</th>
 <th>Description</th>
 <th>Required</th>
-<th>Example value</th>
+<th>Example Value</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>available_start_time</td>
+<td>email</td>
 <td>String</td>
-<td>User available start time</td>
+<td>User email</td>
 <td>True</td>
-<td>12:00</td>
+<td>test@example.com</td>
 </tr>
 <tr>
-<td>available_end_time</td>
+<td>password</td>
 <td>String</td>
-<td>User available end time</td>
+<td>User password</td>
 <td>True</td>
-<td>17:00</td>
-</tr>
-<tr>
-<td>name</td>
-<td>String</td>
-<td>User name</td>
-<td>True</td>
-<td>John</td>
-</tr>
-<tr>
-<td>login</td>
-<td>String</td>
-<td>User login type</td>
-<td>True</td>
-<td><code>Google</code>, <code>Facebook</code>, <code>Email</code></td>
-</tr>
-<tr>
-<td>available_days</td>
-<td>Array</td>
-<td>User available days</td>
-<td>True</td>
-<td>Array of <code>Sun</code>, <code>Mon</code>, <code>Tue</code>, <code>Wed</code>, <code>Thu</code>, <code>Fri</code>, <code>Sat</code></td>
+<td>somePassword</td>
 </tr>
 </tbody></table>
-<h2 id='get-users-me'>GET /users/me</h2>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585274478868</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Mon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wed"</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona@mail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition-2'>Definition</h3>
-<p>Get my profile</p>
-<h2 id='get-users-userid'>GET /users/:userId</h2>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan154432"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan15@gmail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition-3'>Definition</h3>
-<p>Get user profile based on user ID</p>
-<h2 id='post-users-search'>POST /users/search</h2>
+<h2 id='post-api-auth-register'>POST /api/auth/register</h2>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test+3@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"somePassword"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"confirmationPassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"somePassword"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585274478868</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Sun"</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona@mail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit 2"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='definition-4'>Definition</h3>
-<p>Search user by exact username</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test+4@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accessToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE5LCJlbWFpbCI6InRlc3QrNEBleGFtcGxlLmNvbSIsImlhdCI6MTYxNjAzNDQ4NH0.aZ04bGvygTM36WVd9s_skPedV0nxEadp7M6C2mvE5Ck"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='definition-2'>Definition</h3>
+<p>Register new user</p>
 <h3 id='request-parameter-2'>Request Parameter</h3>
 <table><thead>
 <tr>
@@ -160,41 +74,45 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>username</td>
+<td>email</td>
 <td>String</td>
-<td>Username to search for</td>
+<td>User email</td>
 <td>True</td>
-<td>anjing</td>
+<td>test+4@example.com</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>User password</td>
+<td>True</td>
+<td>somePassword</td>
+</tr>
+<tr>
+<td>confirmationPassword</td>
+<td>String</td>
+<td>Confirmation Password</td>
+<td>True</td>
+<td>somePassword</td>
 </tr>
 </tbody></table>
-<h2 id='post-users-friend-search'>POST /users/friend/search</h2>
+<h2 id='post-api-users-update-role'>POST /api/users/update-role</h2>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona"</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELLER"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0afd8622-0494-40e2-bcfd-8a08a9a19c14"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1585274478868</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:30"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Sun"</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona0606"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona@mail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corona penyakit 2"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='definition-5'>Definition</h3>
-<p>Search friend by username</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test+2@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELLER"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='definition-3'>Definition</h3>
+<p>After register, user must update their role using above endpoint</p>
 <h3 id='request-parameter-3'>Request Parameter</h3>
 <table><thead>
 <tr>
@@ -202,77 +120,27 @@
 <th>Type</th>
 <th>Description</th>
 <th>Required</th>
-<th>Example value</th>
+<th>Example Value</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>username</td>
+<td>role</td>
 <td>String</td>
-<td>Username to search for</td>
+<td>User role</td>
 <td>True</td>
-<td>anjing</td>
+<td><code>SELLER</code> or <code>BUYER</code></td>
 </tr>
 </tbody></table>
-<h2 id='get-users-friends'>GET /users/friends</h2>
+<h2 id='get-api-users-me'>GET /api/users/me</h2>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anjing1234"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anjing@gmail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anjing"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test+2@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"iat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1615791586</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='definition-6'>Definition</h3>
-<p>Get users friends list</p>
-<h2 id='post-users-upload-ava'>POST /users/upload-ava</h2>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{base64EncodedImage}}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1d0263e7-2015-458c-b29f-801fee73a393.jpg"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d0263e7-2015-458c-b29f-801fee73a393"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1583731912113</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"available_end_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deras.hujan15@gmail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hujan Deras"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='definition-7'>Definition</h3>
-<p>Upload user avatar</p>
-<h3 id='request-parameter-4'>Request Parameter</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-<th>Example value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>image</td>
-<td>String</td>
-<td>Base64 encoded image</td>
-<td>True</td>
-<td>some-base-64-encoded-image</td>
-</tr>
-</tbody></table>
+</span></code></pre><h3 id='definition-4'>Definition</h3>
+<p>Get my profile</p>
