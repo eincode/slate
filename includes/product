@@ -1,0 +1,103 @@
+<h1 id='product'>Product</h1><h2 id='post-api-product-companyid'>POST /api/product/{companyID}</h2>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Midi Dress 3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Midi Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 packs"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full Dress 3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Full Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 kgs"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='definition'>Definition</h3>
+<p>Create product by company ID</p>
+<h3 id='request-parameter'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Example Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>Product Category</td>
+<td>Required</td>
+<td>Fashion</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Product Name</td>
+<td>Required</td>
+<td>Midi Dress</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Product Description</td>
+<td>Required</td>
+<td>Some Custom Midi Dress</td>
+</tr>
+<tr>
+<td>isHalal</td>
+<td>Boolean</td>
+<td>Product is Halal or not</td>
+<td>Required</td>
+<td>true</td>
+</tr>
+<tr>
+<td>minimumOrderQuantity</td>
+<td>String</td>
+<td>Product minimum order quantity</td>
+<td>Required</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h2 id='get-api-product-companyid'>GET /api/product/{companyID}</h2>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Midi Dress 3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Midi Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 packs"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full Dress 3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Full Dress"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 kgs"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='definition-2'>Definition</h3>
+<p>Get product list by company ID</p>
