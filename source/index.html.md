@@ -10,16 +10,14 @@ toc_footers:
 
 includes:
   - user
-  - group
-  - events
 
 search: true
 ---
 
 # Introduction
 
-Floo backend is authenticated only with user id which is put in the `userid` header on each request, without it, server will return code `401 Unauthorized` and will not process your request.
+This is the documentation for Minato Project API
 
 ### Base URL
 
-https://iacr9wz5kh.execute-api.ap-northeast-1.amazonaws.com/staging
+http://35.200.18.242:3000

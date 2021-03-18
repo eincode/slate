@@ -2,29 +2,22 @@
 
 ## User Registration Flow
 
-### Cognito registration
+### Registration
 
-User needs to be registered first through cognito in order to get that user's ID to be used in the request header. After user registration, user will be asked for their data needed in order to use Floo app. After the data is obtained, client will update the user details through the update endpoint below.
+User needs to be registered first before they can use the app
 
-### After Cognito registration
+### Auth Requirements
 
-After user is registered in Cognito, a Post Registration trigger will invoke the auto-user-registration function which will add said user to DynamoDb with values:
+After login, the client needs to include token in `Authorization` field in the header with value of `Bearer {TOKEN}` to be able to verify the user authenticity
 
-- User ID: User's ID provided by Cognito
-- Email: User's cognito registered email
-- Username: User's email before the `@` character appended with 4 digit random number
-
-## POST /users/update
+## POST /api/auth/login
 
 > Request Example
 
 ```json
 {
-  "available_start_time": "00:00",
-  "available_end_time": "23:30",
-  "login": "Email",
-  "name": "corona penyakit",
-  "available_days": ["Mon", "Tue", "Wed"]
+  "email": "test+2@example.com",
+  "password": "somePassword"
 }
 ```
 
@@ -32,219 +25,98 @@ After user is registered in Cognito, a Post Registration trigger will invoke the
 
 ```json
 {
-  "avatar": "-",
-  "login": "Email",
-  "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-  "available_start_time": "00:00",
-  "created_at": 1585274478868,
-  "available_end_time": "23:30",
-  "role": "User",
-  "available_days": ["Mon", "Tue", "Wed"],
-  "username": "corona0606",
-  "email": "corona@mail.com",
-  "name": "corona penyakit"
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjIsImVtYWlsIjoidGVzdCsyQGV4YW1wbGUuY29tIiwiaWF0IjoxNjE2MDM4ODg0fQ._QwfGpTiStsmrXxg-_bwDEQeTmXWoCgev2k4RDVrINk"
 }
 ```
 
 ### Definition
 
-Update user profile
+Login using email and password
 
 ### Request Parameter
 
-| Name                 | Type   | Description               | Required | Example value                                            |
-| -------------------- | ------ | ------------------------- | -------- | -------------------------------------------------------- |
-| available_start_time | String | User available start time | True     | 12:00                                                    |
-| available_end_time   | String | User available end time   | True     | 17:00                                                    |
-| name                 | String | User name                 | True     | John                                                     |
-| login                | String | User login type           | True     | `Google`, `Facebook`, `Email`                            |
-| available_days       | Array  | User available days       | True     | Array of `Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat` |
+| Name     | Type   | Description   | Required | Example Value    |
+| -------- | ------ | ------------- | -------- | ---------------- |
+| email    | String | User email    | True     | test@example.com |
+| password | String | User password | True     | somePassword     |
 
-## GET /users/me
+## POST /api/auth/register
+
+> Request Example
+
+```json
+{
+  "email": "test+3@example.com",
+  "password": "somePassword",
+  "confirmationPassword": "somePassword"
+}
+```
 
 > Response Example
 
 ```json
 {
-  "avatar": "-",
-  "login": "Email",
-  "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-  "available_start_time": "00:00",
-  "created_at": 1585274478868,
-  "available_end_time": "23:30",
-  "role": "User",
-  "available_days": ["Mon", "Tue", "Wed"],
-  "username": "corona0606",
-  "email": "corona@mail.com",
-  "name": "corona penyakit"
+  "email": "test+4@example.com",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE5LCJlbWFpbCI6InRlc3QrNEBleGFtcGxlLmNvbSIsImlhdCI6MTYxNjAzNDQ4NH0.aZ04bGvygTM36WVd9s_skPedV0nxEadp7M6C2mvE5Ck"
+}
+```
+
+### Definition
+
+Register new user
+
+### Request Parameter
+
+| Name                 | Type   | Description           | Required | Example value      |
+| -------------------- | ------ | --------------------- | -------- | ------------------ |
+| email                | String | User email            | True     | test+4@example.com |
+| password             | String | User password         | True     | somePassword       |
+| confirmationPassword | String | Confirmation Password | True     | somePassword       |
+
+## POST /api/users/update-role
+
+> Request Example
+
+```json
+{
+  "role": "SELLER"
+}
+```
+
+> Response Example
+
+```json
+{
+  "id": 2,
+  "email": "test+2@example.com",
+  "role": "SELLER"
+}
+```
+
+### Definition
+
+After register, user must update their role using above endpoint
+
+### Request Parameter
+
+| Name | Type   | Description | Required | Example Value       |
+| ---- | ------ | ----------- | -------- | ------------------- |
+| role | String | User role   | True     | `SELLER` or `BUYER` |
+
+## GET /api/users/me
+
+> Response Example
+
+```json
+{
+  "user": {
+    "_id": 2,
+    "email": "test+2@example.com",
+    "iat": 1615791586
+  }
 }
 ```
 
 ### Definition
 
 Get my profile
-
-## GET /users/:userId
-
-> Response Example
-
-```json
-{
-  "avatar": "-",
-  "login": "Google",
-  "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "available_start_time": "09:00",
-  "created_at": 1583731912113,
-  "available_end_time": "21:00",
-  "role": "User",
-  "username": "deras.hujan154432",
-  "email": "deras.hujan15@gmail.com",
-  "name": "Hujan Deras"
-}
-```
-
-### Definition
-
-Get user profile based on user ID
-
-## POST /users/search
-
-> Request Example
-
-```json
-{
-  "username": "corona0606"
-}
-```
-
-> Response Example
-
-```json
-[
-  {
-    "avatar": "-",
-    "login": "Email",
-    "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-    "available_start_time": "00:00",
-    "created_at": 1585274478868,
-    "available_end_time": "23:30",
-    "role": "User",
-    "available_days": ["Sun"],
-    "username": "corona0606",
-    "email": "corona@mail.com",
-    "name": "corona penyakit 2"
-  }
-]
-```
-
-### Definition
-
-Search user by exact username
-
-### Request Parameter
-
-| Name     | Type   | Description            | Required | Example value |
-| -------- | ------ | ---------------------- | -------- | ------------- |
-| username | String | Username to search for | True     | anjing        |
-
-## POST /users/friend/search
-
-> Request Example
-
-```json
-{
-  "username": "corona"
-}
-```
-
-> Response Example
-
-```json
-[
-  {
-    "avatar": "-",
-    "login": "Email",
-    "user_id": "0afd8622-0494-40e2-bcfd-8a08a9a19c14",
-    "available_start_time": "00:00",
-    "created_at": 1585274478868,
-    "available_end_time": "23:30",
-    "role": "User",
-    "available_days": ["Sun"],
-    "username": "corona0606",
-    "email": "corona@mail.com",
-    "name": "corona penyakit 2"
-  }
-]
-```
-
-### Definition
-
-Search friend by username
-
-### Request Parameter
-
-| Name     | Type   | Description            | Required | Example value |
-| -------- | ------ | ---------------------- | -------- | ------------- |
-| username | String | Username to search for | True     | anjing        |
-
-## GET /users/friends
-
-> Response Example
-
-```json
-[
-  {
-    "avatar": "-",
-    "login": "Google",
-    "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-    "available_start_time": "09:00",
-    "created_at": 1583731912113,
-    "available_end_time": "21:00",
-    "role": "User",
-    "username": "anjing1234",
-    "email": "anjing@gmail.com",
-    "name": "Anjing"
-  }
-]
-```
-
-### Definition
-
-Get users friends list
-
-## POST /users/upload-ava
-
-> Request Example
-
-```json
-{
-  "image": "{{base64EncodedImage}}"
-}
-```
-
-> Response Example
-
-```json
-{
-  "avatar": "https://users-photo-dev.s3.ap-northeast-1.amazonaws.com/uploads/1d0263e7-2015-458c-b29f-801fee73a393.jpg",
-  "login": "Google",
-  "user_id": "1d0263e7-2015-458c-b29f-801fee73a393",
-  "available_start_time": "09:00",
-  "created_at": 1583731912113,
-  "available_end_time": "21:00",
-  "role": "User",
-  "username": null,
-  "email": "deras.hujan15@gmail.com",
-  "name": "Hujan Deras"
-}
-```
-
-### Definition
-
-Upload user avatar
-
-### Request Parameter
-
-| Name  | Type   | Description          | Required | Example value              |
-| ----- | ------ | -------------------- | -------- | -------------------------- |
-| image | String | Base64 encoded image | True     | some-base-64-encoded-image |
