@@ -13,7 +13,8 @@
   "website": "https://google.com",
   "email": "btob@boyce.com",
   "phone": "+62812345679",
-  "request": "From Tokyo only"
+  "request": "From Tokyo only",
+  "img": "base64 image in JPG"
 }
 ```
 
@@ -21,7 +22,7 @@
 
 ```json
 {
-  "id": 6,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
   "country": "Indonesia",
   "name": "BTOB 4",
   "type": "Fashion",
@@ -30,8 +31,8 @@
   "email": "btob@boyce.com",
   "phone": "+62812345679",
   "request": "From Tokyo only",
-  "img": null,
-  "userId": 20,
+  "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+  "userId": "d2f0744f-a334-46da-8722-2ccc79876287",
   "createdAt": "2021-03-18T04:25:31.034Z"
 }
 ```
@@ -42,16 +43,17 @@ Create a new company
 
 ### Request Parameter
 
-| Name    | Type   | Description                  | Required | Example Value      |
-| ------- | ------ | ---------------------------- | -------- | ------------------ |
-| country | String | Country for company          | True     | Indonesia          |
-| name    | String | Company Name                 | True     | BTOB               |
-| type    | String | Company type of industry     | True     | Fashion            |
-| address | String | Company address              | True     | Boyce Avenue No. 5 |
-| website | String | Company website              | True     | https://google.com |
-| email   | String | Company email                | True     | btob@boyce.com     |
-| phone   | String | Company phone                | True     | +8823643234        |
-| request | String | Special request from company | True     | From Tokyo only    |
+| Name    | Type   | Description                  | Required | Example Value        |
+| ------- | ------ | ---------------------------- | -------- | -------------------- |
+| country | String | Country for company          | True     | Indonesia            |
+| name    | String | Company Name                 | True     | BTOB                 |
+| type    | String | Company type of industry     | True     | Fashion              |
+| address | String | Company address              | True     | Boyce Avenue No. 5   |
+| website | String | Company website              | True     | https://google.com   |
+| email   | String | Company email                | True     | btob@boyce.com       |
+| phone   | String | Company phone                | True     | +8823643234          |
+| request | String | Special request from company | True     | From Tokyo only      |
+| img     | String | Image in base64 format       | Optional | base64 encoded image |
 
 ## GET /api/company/me
 
@@ -59,7 +61,7 @@ Create a new company
 
 ```json
 {
-  "id": 6,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
   "country": "Indonesia",
   "name": "BTOB 4",
   "type": "Fashion",
@@ -68,8 +70,8 @@ Create a new company
   "email": "btob@boyce.com",
   "phone": "+62812345679",
   "request": "From Tokyo only",
-  "img": null,
-  "userId": 20,
+  "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+  "userId": "d2f0744f-a334-46da-8722-2ccc79876287",
   "createdAt": "2021-03-18T04:25:31.034Z"
 }
 ```
@@ -84,7 +86,7 @@ Get my company
 
 ```json
 {
-  "id": 3,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
   "country": "Indonesia",
   "name": "BTOB 3",
   "type": "Fashion",
@@ -93,8 +95,8 @@ Get my company
   "email": "btob@boyce.com",
   "phone": "+62812345679",
   "request": "From Tokyo only",
-  "img": null,
-  "userId": 3,
+  "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+  "userId": "d2f0744f-a334-46da-8722-2ccc79876287",
   "createdAt": "2021-03-15T07:13:31.163Z"
 }
 ```
@@ -109,7 +111,7 @@ Get company by ID
 
 ```json
 {
-  "companyId": 3
+  "companyId": "d2f0744f-a334-46da-8722-2ccc79876287"
 }
 ```
 
@@ -117,8 +119,8 @@ Get company by ID
 
 ```json
 {
-  "id": 3,
-  "personInChargeId": 5
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
+  "personInChargeId": "d2f0744f-a334-46da-8722-2ccc79876287"
 }
 ```
 
@@ -128,9 +130,9 @@ Save company by company ID
 
 ### Request parameter
 
-| Name      | Type   | Description        | Required | Example Value |
-| --------- | ------ | ------------------ | -------- | ------------- |
-| companyId | Number | Company ID to save | True     | 4             |
+| Name      | Type   | Description        | Required | Example Value                          |
+| --------- | ------ | ------------------ | -------- | -------------------------------------- |
+| companyId | String | Company ID to save | True     | `d2f0744f-a334-46da-8722-2ccc79876287` |
 
 ## GET /api/company/saved
 
@@ -138,11 +140,11 @@ Save company by company ID
 
 ```json
 {
-  "id": 3,
-  "personInChargeId": 5,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
+  "personInChargeId": "d2f0744f-a334-46da-8722-2ccc79876287",
   "companies": [
     {
-      "id": 3,
+      "id": "d2f0744f-a334-46da-8722-2ccc79876287",
       "country": "Indonesia",
       "name": "BTOB 3",
       "type": "Fashion",
@@ -151,8 +153,8 @@ Save company by company ID
       "email": "btob@boyce.com",
       "phone": "+62812345679",
       "request": "From Tokyo only",
-      "img": null,
-      "userId": 3,
+      "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+      "userId": "d2f0744f-a334-46da-8722-2ccc79876287",
       "createdAt": "2021-03-15T07:13:31.163Z"
     }
   ]

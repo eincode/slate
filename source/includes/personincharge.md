@@ -9,7 +9,8 @@
   "name": "Boyce Avenue 4",
   "nationality": "Austria",
   "email": "boyce@me.com",
-  "phone": "+88232637723"
+  "phone": "+88232637723",
+  "img": "base64 image in JPG"
 }
 ```
 
@@ -22,8 +23,8 @@
   "nationality": "Austria",
   "email": "boyce@me.com",
   "phone": "+88232637723",
-  "img": null,
-  "companyId": 6,
+  "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+  "companyId": "d2f0744f-a334-46da-8722-2ccc79876287",
   "userId": 20
 }
 ```
@@ -34,12 +35,13 @@ Create Person in Charge for the company
 
 ### Request Parameter
 
-| Name        | Type   | Description                  | Required | Example Value  |
-| ----------- | ------ | ---------------------------- | -------- | -------------- |
-| name        | String | Person in Charge Name        | True     | Boyce Avenue   |
-| nationality | String | Person in Charge Nationality | True     | Indonesia      |
-| email       | String | Person in Charge Email       | True     | boyce@btob.com |
-| phone       | String | Person in Charge Phone       | True     | +8843212312342 |
+| Name        | Type   | Description                  | Required | Example Value        |
+| ----------- | ------ | ---------------------------- | -------- | -------------------- |
+| name        | String | Person in Charge Name        | True     | Boyce Avenue         |
+| nationality | String | Person in Charge Nationality | True     | Indonesia            |
+| email       | String | Person in Charge Email       | True     | boyce@btob.com       |
+| phone       | String | Person in Charge Phone       | True     | +8843212312342       |
+| img         | String | Image in base64 format       | Optional | base64 encoded image |
 
 ## GET /api/pic/{personInChargeId}
 
@@ -48,14 +50,14 @@ Create Person in Charge for the company
 ```json
 [
   {
-    "id": 3,
+    "id": "d2f0744f-a334-46da-8722-2ccc79876287",
     "name": "Boyce Avenue 3",
     "nationality": "Austria",
     "email": "boyce@me.com",
     "phone": "+88232637723",
-    "img": null,
-    "companyId": 3,
-    "userId": 3
+    "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
+    "companyId": "d2f0744f-a334-46da-8722-2ccc79876287",
+    "userId": "d2f0744f-a334-46da-8722-2ccc79876287"
   }
 ]
 ```

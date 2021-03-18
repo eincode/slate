@@ -11,14 +11,16 @@
     "name": "Midi Dress 3",
     "description": "Some custom Midi Dress",
     "isHalal": true,
-    "minimumOrderQuantity": "20 packs"
+    "minimumOrderQuantity": "20 packs",
+    "img": "base64 image in JPG"
   },
   {
     "category": "Fashion",
     "name": "Full Dress 3",
     "description": "Some custom Full Dress",
     "isHalal": true,
-    "minimumOrderQuantity": "20 kgs"
+    "minimumOrderQuantity": "20 kgs",
+    "img": "base64 image in JPG"
   }
 ]
 ```
@@ -44,6 +46,7 @@ Create product by company ID
 | description          | String  | Product Description            | Required | Some Custom Midi Dress |
 | isHalal              | Boolean | Product is Halal or not        | Required | true                   |
 | minimumOrderQuantity | String  | Product minimum order quantity | Required | true                   |
+| img                  | String  | Image in base64 format         | Optional | base64 encoded image   |
 
 ## GET /api/product/{companyID}
 
@@ -52,27 +55,30 @@ Create product by company ID
 ```json
 [
   {
-    "id": 9,
+    "id": "07514458-b24a-41aa-b924-262eb2486f74",
     "category": "Fashion",
     "name": "Midi Dress 3",
     "description": "Some custom Midi Dress",
     "img": null,
     "isHalal": true,
     "minimumOrderQuantity": "20 packs",
-    "companyId": 6
+    "companyId": 6,
+    "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"
   },
   {
-    "id": 10,
+    "id": "07514458-b24a-41aa-b924-262eb2486f74",
     "category": "Fashion",
     "name": "Full Dress 3",
     "description": "Some custom Full Dress",
     "img": null,
     "isHalal": true,
     "minimumOrderQuantity": "20 kgs",
-    "companyId": 6
+    "companyId": 6,
+    "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"
   }
 ]
 ```
 
 ### Definition
+
 Get product list by company ID

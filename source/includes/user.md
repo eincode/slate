@@ -110,7 +110,7 @@ After register, user must update their role using above endpoint
 ```json
 {
   "user": {
-    "_id": 2,
+    "_id": "07514458-b24a-41aa-b924-262eb2486f74",
     "email": "test+2@example.com",
     "iat": 1615791586
   }
