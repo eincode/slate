@@ -10,6 +10,9 @@ toc_footers:
 
 includes:
   - user
+  - company
+  - personincharge
+  - product
 
 search: true
 ---
