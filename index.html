@@ -300,7 +300,8 @@
         <h1 id='introduction'>Introduction</h1>
 <p>This is the documentation for Minato Project API</p>
 <h3 id='base-url'>Base URL</h3>
-<p>http://35.200.18.242:3000</p>
+<p>http://35.200.18.242:3000
+https://35.200.18.242:3001</p>
 <h1 id='user'>User</h1><h2 id='user-registration-flow'>User Registration Flow</h2><h3 id='registration'>Registration</h3>
 <p>User needs to be registered first before they can use the app</p>
 <h3 id='auth-requirements'>Auth Requirements</h3>
@@ -759,7 +760,7 @@
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Midi Dress"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 packs"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base64 image in JPG"</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"base64 image in JPG"</span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
@@ -767,7 +768,7 @@
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Full Dress"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 kgs"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base64 image in JPG"</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"base64 image in JPG"</span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -826,7 +827,7 @@
 </tr>
 <tr>
 <td>img</td>
-<td>String</td>
+<td>String[]</td>
 <td>Image in base64 format</td>
 <td>Optional</td>
 <td>base64 encoded image</td>
@@ -845,7 +846,7 @@
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 packs"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d2f0744f-a334-46da-8722-2ccc79876287"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07514458-b24a-41aa-b924-262eb2486f74"</span><span class="p">,</span><span class="w">
@@ -855,7 +856,7 @@
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 kgs"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d2f0744f-a334-46da-8722-2ccc79876287"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="w">
+    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><h3 id='definition-2'>Definition</h3>
