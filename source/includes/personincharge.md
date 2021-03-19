@@ -18,14 +18,14 @@
 
 ```json
 {
-  "id": 5,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
   "name": "Boyce Avenue 4",
   "nationality": "Austria",
   "email": "boyce@me.com",
   "phone": "+88232637723",
   "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg",
   "companyId": "d2f0744f-a334-46da-8722-2ccc79876287",
-  "userId": 20
+  "userId": "d2f0744f-a334-46da-8722-2ccc79876287"
 }
 ```
 

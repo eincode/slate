@@ -59,10 +59,9 @@ Create product by company ID
     "category": "Fashion",
     "name": "Midi Dress 3",
     "description": "Some custom Midi Dress",
-    "img": null,
     "isHalal": true,
     "minimumOrderQuantity": "20 packs",
-    "companyId": 6,
+    "companyId": "d2f0744f-a334-46da-8722-2ccc79876287",
     "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"
   },
   {
@@ -70,10 +69,9 @@ Create product by company ID
     "category": "Fashion",
     "name": "Full Dress 3",
     "description": "Some custom Full Dress",
-    "img": null,
     "isHalal": true,
     "minimumOrderQuantity": "20 kgs",
-    "companyId": 6,
+    "companyId": "d2f0744f-a334-46da-8722-2ccc79876287",
     "img": "/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"
   }
 ]

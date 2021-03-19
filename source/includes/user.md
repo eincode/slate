@@ -87,7 +87,7 @@ Register new user
 
 ```json
 {
-  "id": 2,
+  "id": "d2f0744f-a334-46da-8722-2ccc79876287",
   "email": "test+2@example.com",
   "role": "SELLER"
 }
