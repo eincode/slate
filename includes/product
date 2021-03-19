@@ -92,10 +92,9 @@
     </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Midi Dress 3"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Midi Dress"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 packs"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d2f0744f-a334-46da-8722-2ccc79876287"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -103,10 +102,9 @@
     </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fashion"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full Dress 3"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some custom Full Dress"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"isHalal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"minimumOrderQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 kgs"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d2f0744f-a334-46da-8722-2ccc79876287"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"img"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/images/product/d2f0744f-a334-46da-8722-2ccc79876287.jpg"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
