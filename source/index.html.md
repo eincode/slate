@@ -24,3 +24,4 @@ This is the documentation for Minato Project API
 ### Base URL
 
 http://35.200.18.242:3000
+https://35.200.18.242:3001
